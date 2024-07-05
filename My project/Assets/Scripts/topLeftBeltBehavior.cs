@@ -36,6 +36,10 @@ public class TopLeftBeltBehavior : BeltBehavior
                 Vector2 itemPoint = new Vector2(itemBounds.min.x, itemBounds.min.y);
 
                 // Always move the item if it is exactly or more on top of the collider
+                if (!bounds.Contains(itemPoint)) 
+                {
+                    continue;
+                }
             }
         }
     }

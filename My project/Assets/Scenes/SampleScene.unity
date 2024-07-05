@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 155078198}
   m_Layer: 0
   m_Name: ConveyerTurn0
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 651870896}
   m_Layer: 0
   m_Name: conveyerbelt2
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 827849147}
   m_Layer: 0
   m_Name: ConveyerTurn2
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 1463628392}
   m_Layer: 0
   m_Name: ConveyerTurn3
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 1504283412}
   m_Layer: 0
   m_Name: conveyerbelt0
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 1575907522}
   m_Layer: 0
   m_Name: conveyerbelt1
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 1750963157}
   m_Layer: 0
   m_Name: ConveyerTurn1
-  m_TagString: Untagged
+  m_TagString: Belt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
