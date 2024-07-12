@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class NewBehaviourScript : MonoBehaviour
+public abstract class BeltBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     protected virtual void Start()
@@ -13,7 +13,7 @@ public abstract class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        
+        this.WatchForItem();
     }
 
 

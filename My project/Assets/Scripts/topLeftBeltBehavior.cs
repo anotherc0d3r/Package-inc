@@ -1,9 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class TopLeftBeltBehaviour : beltBehaviour
-{
-    // Use this for initialisation
+public class TopLeftBeltBehaviour : BeltBehaviour
+{    // Use this for initialisation
     protected override void Start()
     {
         base.Start();
@@ -45,7 +44,7 @@ public class TopLeftBeltBehaviour : beltBehaviour
                 if (this.transform.position.y - item.position.y > 0)
                 {
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
-                    itemBehaviour.speed = 5f;
+                    itemBehaviour.speed = 1f;
                     itemBehaviour.MoveUp();
                 }
 
@@ -53,7 +52,7 @@ public class TopLeftBeltBehaviour : beltBehaviour
                 else
                 {
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
-                    itemBehaviour.speed = 5f;
+                    itemBehaviour.speed = 1f;
                     itemBehaviour.MoveRight();
                 }
             }

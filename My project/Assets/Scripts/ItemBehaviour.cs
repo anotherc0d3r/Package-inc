@@ -5,7 +5,7 @@ public class ItemBehaviour : MonoBehaviour
 {
 
     // Speed
-    private float_speed = 1;
+    private float _speed = 1;
 
     public float speed
     {
@@ -80,7 +80,7 @@ public class ItemBehaviour : MonoBehaviour
     {
         if (collision.tag == Tags.Item)
         {
-            Debug.Log("TRIGGEER ENTER 2D: " + collision.gameObject.name);
+            Debug.Log("TRIGGEER ENTER 2D: "+ collision.gameObject.name);
         }
     }
 }
