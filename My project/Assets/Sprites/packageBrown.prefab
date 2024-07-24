@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7020761263399229609}
   m_Layer: 0
-  m_Name: BrownPackage
+  m_Name: packageBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
