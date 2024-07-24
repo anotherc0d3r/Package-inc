@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class packageSpawnerScript : MonoBehaviour
 {
-    List<GameObject> prefabList = new List<GameObject>();
+    List<GameObject> packageList = new List<GameObject>();
     public GameObject packageBrown;
     public GameObject packageOrange;
     public GameObject packageBlue;
@@ -12,21 +12,14 @@ public class packageSpawnerScript : MonoBehaviour
     public float spawnRate = 10;
     private float timer = 0;
 
-    
 
     // Start is called before the first frame update
     void Start()
     {
     // Adds all packages to array to randomly choose from
-        prefabList.Add(packageBrown);
-        prefabList.Add(packageBlue);
-        prefabList.Add(packageOrange);
-
-           int prefabIndex = UnityEngine.Random.Range(0,3);
-        Instantiate(prefabList[prefabIndex]);
-
-    //spawns one package instantly 
-    // Instantiate(package, transform.position, transform.rotation);
+        packageList.Add(packageBrown);
+        packageList.Add(packageBlue);
+        packageList.Add(packageOrange);
     }
 
     // Update is called once per frame
@@ -38,7 +31,9 @@ public class packageSpawnerScript : MonoBehaviour
             timer = timer + Time.deltaTime;
         }else
         {
-            Instantiate(package, transform.position, transform.rotation);
+        //Chooses a random package from the prefab list
+        int packageIndex = UnityEngine.Random.Range(0,3);
+        Instantiate(packageList[packageIndex], transform.position, transform.rotation);
             timer = 0;
         }
         }
