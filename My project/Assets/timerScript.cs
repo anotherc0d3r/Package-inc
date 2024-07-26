@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,26 +8,22 @@ public class timerScript : MonoBehaviour
 {
     public float duration = 60;
     public float timeRemaning;
-    public bool isCountingDown = false;
-    public Text timer;
-    private int time;
-
+    public Text timerText;
 
     // Start is called before the first frame update
     void Start()
     {
-      if(!isCountingDown)  {
-        isCountingDown = true;
         timeRemaning = duration;
-      }
     }
 
     // Update is called once per frame
     void Update()
     {
-        time = (int)Time.time;
-        timeRemaning = timeRemaning - time;
+        // DeltaTime is subtracted from time remaning
+        timeRemaning = timeRemaning - Time.deltaTime;
         Debug.Log("Time Remaning " + timeRemaning);
-        Debug.Log("Time " + time);
+        // Outputs timeRemaning to UI
+        timerText.text ="Time : " + timeRemaning.ToString("0.0");
+        Debug.Log("Timer display " + timerText.text);
     }
 }
