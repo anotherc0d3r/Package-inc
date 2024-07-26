@@ -1940,7 +1940,7 @@ Transform:
   m_GameObject: {fileID: 1648414095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.01, y: 2.29, z: -2.0202634}
+  m_LocalPosition: {x: -12.01, y: 2.41, z: -2.0202634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1961,7 +1961,8 @@ MonoBehaviour:
   packageBrown: {fileID: 2363876201986321417, guid: dc5be7772f7c21242b0ebc316946a8ad, type: 3}
   packageOrange: {fileID: 2363876201986321417, guid: 2bc3d94d8ff60ef459e8bc7ef0464535, type: 3}
   packageBlue: {fileID: 2363876201986321417, guid: c5848223136594e48ab22ac5f14302e3, type: 3}
-  spawnRate: 2
+  initialSpawnRate: 10
+  difficulty: 1
 --- !u!1 &1750963156
 GameObject:
   m_ObjectHideFlags: 0
