@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7020761263399229609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: packageBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8142975346767377694}
   - component: {fileID: 6017253317214739437}
   - component: {fileID: 3241487068130256070}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: packageOrange
   m_TagString: Item
   m_Icon: {fileID: 0}
