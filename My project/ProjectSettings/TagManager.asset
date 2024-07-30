@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Item
   - Belt
+  - Logic
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Package
   - Water
   - UI
   - 
