@@ -18,7 +18,7 @@ public class destination : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-     Debug.Log("triggered");
+     Debug.Log("hit");
      logic.addScore();
     }
 }
