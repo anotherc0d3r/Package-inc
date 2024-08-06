@@ -8,7 +8,7 @@ public class destination : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        logicScript = FindObjectOfType<logicScript>();
     }
 
     // Update is called once per frame
