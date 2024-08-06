@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class destination : MonoBehaviour
 {
-    public logicScript logic;
+    public logicScript logicScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,6 @@ public class destination : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
      Debug.Log("hit");
-     logic.addScore();
+     logicScript.addScore();
     }
 }
