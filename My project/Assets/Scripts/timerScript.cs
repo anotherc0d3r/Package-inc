@@ -24,10 +24,10 @@ public class timerScript : MonoBehaviour
         {
         // DeltaTime is subtracted from time remaning
         timeRemaning = timeRemaning - Time.deltaTime;
-        Debug.Log("Time Remaning " + timeRemaning);
+       // Debug.Log("Time Remaning " + timeRemaning);
         // Outputs timeRemaning to UI
         timerText.text = timeRemaning.ToString("0");
-        Debug.Log("Timer display " + timerText.text);
+       // Debug.Log("Timer display " + timerText.text);
         }else{
         gamePlay = false;
         }
