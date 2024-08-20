@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class BottomLeftBeltBehaviour : BeltBehaviour
+public class DownLeftBeltBehaviour : BeltBehaviour
 {    // Use this for initialisation
     protected override void Start()
     {
@@ -32,7 +32,7 @@ public class BottomLeftBeltBehaviour : BeltBehaviour
             {
                 Transform item = collider.GetComponent<Transform>();
                 Bounds itemBounds = item.GetComponent<Collider2D>().bounds;
-                Vector2 itemPoint = new Vector2(itemBounds.max.x, itemBounds.min.y);
+                Vector2 itemPoint = new Vector2(itemBounds.max.x, itemBounds.max.y);
 
                 // Always move the item if it is exactly or more on top of the collider
                 if (!bounds.Contains(itemPoint)) 
@@ -41,11 +41,11 @@ public class BottomLeftBeltBehaviour : BeltBehaviour
                 }
 
                 // Has the item reached the origin point?
-                if (this.transform.position.x - item.position.x < 0)
+                if (this.transform.position.y - item.position.y < 0)
                 {
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
                     itemBehaviour.speed = 1f;
-                    itemBehaviour.MoveLeft();
+                    itemBehaviour.MoveDown();
                 }
 
                 //If the item has reached the origin point, move right
@@ -53,7 +53,7 @@ public class BottomLeftBeltBehaviour : BeltBehaviour
                 {
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
                     itemBehaviour.speed = 1f;
-                    itemBehaviour.MoveUp();
+                    itemBehaviour.MoveLeft();
                 }
             }
         }
