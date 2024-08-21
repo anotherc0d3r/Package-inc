@@ -30,8 +30,13 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("howToPlay");
+    }
     public void QuitGame()
     {
         Application.Quit();
     }
+
 }
