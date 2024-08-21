@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class BottomRightBeltBehaviour : BeltBehaviour
+public class LeftDownBeltBehaviour : BeltBehaviour
 {    // Use this for initialisation
     protected override void Start()
     {
@@ -41,11 +41,11 @@ public class BottomRightBeltBehaviour : BeltBehaviour
                 }
 
                 // Has the item reached the origin point?
-                if (this.transform.position.y - item.position.y < 0)
+                if (this.transform.position.x - item.position.x < 0)
                 {
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
                     itemBehaviour.speed = 1f;
-                    itemBehaviour.MoveDown();
+                    itemBehaviour.MoveLeft();
                 }
 
                 //If the item has reached the origin point, move right
@@ -53,7 +53,7 @@ public class BottomRightBeltBehaviour : BeltBehaviour
                 {
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
                     itemBehaviour.speed = 1f;
-                    itemBehaviour.MoveLeft();
+                    itemBehaviour.MoveDown();
                 }
             }
         }
