@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChangeSpriteOnClick : MonoBehaviour
+public class RightUpDownBeltBehaviour : MonoBehaviour
 {
     public Sprite newSprite;  // The sprite to switch to
     private Sprite originalSprite;  // The original sprite
