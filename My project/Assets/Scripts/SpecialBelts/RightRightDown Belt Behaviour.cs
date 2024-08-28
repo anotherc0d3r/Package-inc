@@ -12,20 +12,37 @@ public class RightRightDownBeltBehaviour : MonoBehaviour
         originalSprite = spriteRenderer.sprite;  // Store the original sprite
     }
 
-    void OnMouseDown()
+void OnMouseDown()
+{
+    // Check if there's a package on the belt
+    Bounds bounds = this.transform.GetComponent<Collider2D>().bounds;
+    Vector2 size = bounds.size;
+    Collider2D[] colliders = Physics2D.OverlapBoxAll(this.transform.position, size, 0);
+
+    bool packageOnBelt = false;
+
+    foreach (Collider2D collider in colliders)
     {
-        if (spriteRenderer != null)
+        if (collider.tag == Tags.Item)
         {
-            if (spriteRenderer.sprite == originalSprite)
-            {
-                spriteRenderer.sprite = newSprite;
-            }
-            else
-            {
-                spriteRenderer.sprite = originalSprite;
-            }
+            packageOnBelt = true;
+            break;
         }
     }
+
+    // If there's no package, allow sprite change
+    if (!packageOnBelt && spriteRenderer != null)
+    {
+        if (spriteRenderer.sprite == originalSprite)
+        {
+            spriteRenderer.sprite = newSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = originalSprite;
+        }
+    }
+}
 
     void Update()
     {

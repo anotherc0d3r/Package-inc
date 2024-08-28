@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RightUpDownBeltBehaviour : MonoBehaviour
+public class DownDownLeftBeltBehaviour : MonoBehaviour
 {
     public Sprite newSprite;  // The sprite to switch to
     private Sprite originalSprite;  // The original sprite
@@ -12,20 +12,37 @@ public class RightUpDownBeltBehaviour : MonoBehaviour
         originalSprite = spriteRenderer.sprite;  // Store the original sprite
     }
 
-    void OnMouseDown()
+  void OnMouseDown()
+{
+    // Check if there's a package on the belt
+    Bounds bounds = this.transform.GetComponent<Collider2D>().bounds;
+    Vector2 size = bounds.size;
+    Collider2D[] colliders = Physics2D.OverlapBoxAll(this.transform.position, size, 0);
+
+    bool packageOnBelt = false;
+
+    foreach (Collider2D collider in colliders)
     {
-        if (spriteRenderer != null)
+        if (collider.tag == Tags.Item)
         {
-            if (spriteRenderer.sprite == originalSprite)
-            {
-                spriteRenderer.sprite = newSprite;
-            }
-            else
-            {
-                spriteRenderer.sprite = originalSprite;
-            }
+            packageOnBelt = true;
+            break;
         }
     }
+
+    // If there's no package, allow sprite change
+    if (!packageOnBelt && spriteRenderer != null)
+    {
+        if (spriteRenderer.sprite == originalSprite)
+        {
+            spriteRenderer.sprite = newSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = originalSprite;
+        }
+    }
+}
 
     void Update()
     {
@@ -51,40 +68,33 @@ public class RightUpDownBeltBehaviour : MonoBehaviour
 
                 if (spriteRenderer.sprite == originalSprite)
                 {
-                    // RightDownBeltBehaviour logic (Original sprite: Move right, then down)
+                    // Move right
                     itemPoint = new Vector2(itemBounds.min.x, itemBounds.max.y);
 
                     if (!bounds.Contains(itemPoint))
                     {
                         continue;
                     }
+                    itemBehaviour.MoveDown();
 
-                    if (this.transform.position.x - item.position.x > 0)
-                    {
-                        itemBehaviour.MoveRight();
-                    }
-                    else
-                    {
-                        itemBehaviour.MoveDown();
-                    }
                 }
                 else
                 {
-                    // RightUpBeltBehaviour logic (New sprite: Move right, then up)
-                    itemPoint = new Vector2(itemBounds.min.x, itemBounds.min.y);
+                    // Move right then down
+                    itemPoint = new Vector2(itemBounds.max.x, itemBounds.max.y);
 
                     if (!bounds.Contains(itemPoint))
                     {
                         continue;
                     }
 
-                    if (this.transform.position.x - item.position.x > 0)
+                    if (this.transform.position.y - item.position.y < 0)
                     {
-                        itemBehaviour.MoveRight();
+                        itemBehaviour.MoveDown();
                     }
                     else
                     {
-                        itemBehaviour.MoveUp();
+                        itemBehaviour.MoveLeft();
                     }
                 }
             }
