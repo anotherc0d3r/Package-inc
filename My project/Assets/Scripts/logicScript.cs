@@ -8,6 +8,11 @@ public class logicScript : MonoBehaviour
     public int score;
     public Text scoreText;
 
+    void Start()
+    {
+        score = 0;
+    }
+
         [ContextMenu("Increase score")]
         public void addScore()
         {
