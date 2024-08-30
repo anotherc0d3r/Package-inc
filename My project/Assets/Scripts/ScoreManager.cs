@@ -16,6 +16,6 @@ public class ScoreManager : MonoBehaviour
     // Update the score text on the screen
     private void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = " " + score.ToString();
     }
 }
