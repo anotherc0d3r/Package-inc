@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562756052657805544}
-  - component: {fileID: 6868274149231734021}
   - component: {fileID: 7017733073130208784}
   - component: {fileID: 4575208059880831250}
   - component: {fileID: 1213280670824842083}
+  - component: {fileID: 5620233882938163250}
   m_Layer: 0
   m_Name: blueDestination
   m_TagString: Untagged
@@ -35,19 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6868274149231734021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6202169629240918567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a34bbe47f291f469a650be00bf12cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logicScript: {fileID: 0}
 --- !u!212 &7017733073130208784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -172,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5620233882938163250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202169629240918567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e313cb1b73caa4c4f969e52206c46eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPackageSprite: {fileID: 21300000, guid: 7e87bf002aaac374ca958d015bf151fe, type: 3}
+  scoreIncrement: 1

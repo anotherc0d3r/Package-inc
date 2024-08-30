@@ -1,32 +1,33 @@
 using UnityEngine;
 
-public class PackageScoreManager : MonoBehaviour
+public class PackageManager : MonoBehaviour
 {
-    public int score = 0;  // The player's score
-    public Color correctColor;  // The correct color for this destination
+    public Sprite correctPackageSprite;  // The correct sprite for this destination
+    public int scoreIncrement = 1;      // The amount to increment the score
+    public ScoreManager scoreManager;    // Reference to the ScoreManager
 
-    // This function will be called when a package reaches the destination
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "item")
+        if (collision.gameObject.tag == "Item")
         {
             SpriteRenderer packageRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
-            
-            // Check if the package color matches the destination color
-            if (packageRenderer != null && packageRenderer.color == correctColor)
-            {
-                // Add to the score if the color matches
-                score += 10;
-                Debug.Log("Correct package delivered! Score: " + score);
-            }
-            else
-            {
-                // No score added if the color does not match
-                Debug.Log("Incorrect package delivered.");
-            }
 
-            // Optionally destroy or disable the package after scoring
-            Destroy(collision.gameObject);
+            if (packageRenderer != null)
+            {
+                if (packageRenderer.sprite == correctPackageSprite)
+                {
+                    scoreManager.AddScore(scoreIncrement);  // Update the score
+                    Debug.Log("Correct package delivered! Score: " + scoreManager.score);
+                }
+                else
+                {
+                    Debug.Log("Incorrect package delivered.");
+                }
+
+                // Optionally, destroy the package after processing
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
+
