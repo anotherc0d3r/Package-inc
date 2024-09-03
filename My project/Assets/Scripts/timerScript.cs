@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class timerScript : MonoBehaviour
 {
     public float duration = 60;
     public float timeRemaning;
-    public Text timerText;
+    public TextMeshProUGUI timerText;
     public bool gamePlay = true;
 
     // Start is called before the first frame update
