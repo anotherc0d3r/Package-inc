@@ -260,7 +260,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_TargetDisplay: 0
 --- !u!224 &78636177
 RectTransform:
@@ -1843,7 +1843,7 @@ GameObject:
   - component: {fileID: 1089915115}
   - component: {fileID: 1089915117}
   - component: {fileID: 1089915116}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: score Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2496,6 +2496,10 @@ PrefabInstance:
     - target: {fileID: 929065264671868479, guid: e044c6b222af0874890140d5655acdf7, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355158414636191907, guid: e044c6b222af0874890140d5655acdf7, type: 3}
+      propertyPath: m_Maskable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4416175403653762472, guid: e044c6b222af0874890140d5655acdf7, type: 3}
       propertyPath: m_Layer
