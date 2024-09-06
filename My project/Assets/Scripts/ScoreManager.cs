@@ -13,6 +13,10 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreText();
     }
 
+    public int GetScore() {
+        return score;
+    }
+
     // Update the score text on the screen
     private void UpdateScoreText()
     {

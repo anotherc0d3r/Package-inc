@@ -380,7 +380,7 @@ Transform:
   m_GameObject: {fileID: 252282267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -998.95, y: -497.08807, z: -0.8800943}
+  m_LocalPosition: {x: -998.95, y: -497.08807, z: -1}
   m_LocalScale: {x: 0.16, y: 0.16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -816,6 +816,9 @@ MonoBehaviour:
   timeRemaning: 0
   timerText: {fileID: 414643152}
   gamePlay: 1
+  finalScoreText: {fileID: 0}
+  endGamePanel: {fileID: 0}
+  scoreManager: {fileID: 1344361214}
 --- !u!222 &414643151
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2524,7 +2527,7 @@ Transform:
   m_GameObject: {fileID: 1357538939}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -998.9025, y: -493.96808, z: -0.8800943}
+  m_LocalPosition: {x: -998.9025, y: -493.96808, z: -1}
   m_LocalScale: {x: 0.16, y: 0.16, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
