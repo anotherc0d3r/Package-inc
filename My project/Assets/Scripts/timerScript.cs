@@ -8,43 +8,50 @@ using TMPro;
 public class timerScript : MonoBehaviour
 {
     public float duration = 60;
-    public float timeRemaning;
+    public float timeRemaining;
     public TextMeshProUGUI timerText;
     public bool gamePlay = true;
-    public Text finalScoreText; 
-        public GameObject endGamePanel;
-
-        public ScoreManager scoreManager;
+    public TextMeshProUGUI finalScoreText; 
+    public GameObject endGamePanel;
+    public ScoreManager scoreManager;
+    
+    private bool gameOverTriggered = false; // Flag to ensure GameOver() is called only once
 
     // Start is called before the first frame update
     void Start()
     {
-        timeRemaning = duration;
+        timeRemaining = duration;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (timeRemaning > 0)
+        if (gamePlay && !gameOverTriggered)
         {
-        // DeltaTime is subtracted from time remaning
-        timeRemaning = timeRemaning - Time.deltaTime;
-       // Debug.Log("Time Remaning " + timeRemaning);
-        // Outputs timeRemaning to UI
-        timerText.text = timeRemaning.ToString("0");
-       // Debug.Log("Timer display " + timerText.text);
-        }else{
-        EndGame();
+            if (timeRemaining > 0)
+            {
+                // DeltaTime is subtracted from timeRemaining
+                timeRemaining -= Time.deltaTime;
+
+                // Outputs timeRemaining to UI
+                timerText.text = timeRemaining.ToString("0");
+            }
+            else
+            {
+                // When the timer hits zero, trigger GameOver
+                gamePlay = false;
+                GameOver();
+            }
         }
-    
     }
 
-    void EndGame() {
-        gamePlay = false;
+    void GameOver()
+    {
+        gameOverTriggered = true; // Ensure this only runs once
         endGamePanel.SetActive(true);
-        Time.timeScale = 0;
-        Debug.Log("Game over"); 
-// Get the final score from ScoreManager
+        Time.timeScale = 0; // Pause the game
+        Debug.Log("Game over");
+
+        // Get the final score from ScoreManager
         int finalScore = scoreManager.GetScore();
         finalScoreText.text = "" + finalScore;
     }
