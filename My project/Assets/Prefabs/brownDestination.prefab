@@ -173,3 +173,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctPackageSprite: {fileID: 21300000, guid: a28154e7609196144bf99bd4168cc31b, type: 3}
   scoreIncrement: 1
+  scoreManager: {fileID: 0}
