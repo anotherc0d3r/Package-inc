@@ -3,8 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;   
+using TMPro;
 public class levelMenu : MonoBehaviour
 {
+
+    public TextMeshProUGUI highScoreText;
+
+void Start() {
+            int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScoreText.text = "High Score: " + highScore.ToString();
+}
     public Button[] buttons;
     // Unlock levels based on player progress 
     private void Awake()
