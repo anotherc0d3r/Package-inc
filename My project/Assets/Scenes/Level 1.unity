@@ -1721,8 +1721,8 @@ MonoBehaviour:
   packageBrown: {fileID: 2363876201986321417, guid: dc5be7772f7c21242b0ebc316946a8ad, type: 3}
   packageOrange: {fileID: 2363876201986321417, guid: 2bc3d94d8ff60ef459e8bc7ef0464535, type: 3}
   packageBlue: {fileID: 2363876201986321417, guid: c5848223136594e48ab22ac5f14302e3, type: 3}
-  initialSpawnRate: 5
-  difficulty: 0.05
+  initialSpawnRate: 4.5
+  difficulty: 0.03
 --- !u!4 &588198068
 Transform:
   m_ObjectHideFlags: 0
