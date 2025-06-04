@@ -7,7 +7,7 @@ using TMPro;
 
 public class timerScript : MonoBehaviour
 {
-    public float duration = 60;
+    public float duration = 62;
     public float timeRemaining;
     public TextMeshProUGUI timerText;
     public bool gamePlay = true;
