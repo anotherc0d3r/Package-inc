@@ -5,11 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// packageSpawnerScript.GetComponent<initalSpawnRate>(); // reference to spawnrate
+public class packageSpawnerScript.cs initalSpawnRate;
 public class timerScript : MonoBehaviour
 {
     public float duration = 62;
     public float timeRemaining;
-    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI timerText;   
     public bool gamePlay = true;
     public TextMeshProUGUI finalScoreText; 
     public GameObject endGamePanel;
@@ -54,5 +56,8 @@ public class timerScript : MonoBehaviour
         // Get the final score from ScoreManager
         int finalScore = scoreManager.GetScore();
         finalScoreText.text = "" + finalScore;
+
+        // Reset package spawn rate
+        initialSpawnRate = 10;
     }
 }
