@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-// packageSpawnerScript.GetComponent<initalSpawnRate>(); // reference to spawnrate
-public class packageSpawnerScript.cs initalSpawnRate;
+// public class packageSpawnerScript.cs initalSpawnRate;
+
 public class timerScript : MonoBehaviour
 {
     public float duration = 62;
@@ -16,6 +16,7 @@ public class timerScript : MonoBehaviour
     public TextMeshProUGUI finalScoreText; 
     public GameObject endGamePanel;
     public ScoreManager scoreManager;
+    public packageSpawnerScript spawnScript;
     
     private bool gameOverTriggered = false; // Flag to ensure GameOver() is called only once
 
@@ -58,6 +59,6 @@ public class timerScript : MonoBehaviour
         finalScoreText.text = "" + finalScore;
 
         // Reset package spawn rate
-        initialSpawnRate = 10;
+        spawnScript.resetSpawnRate();
     }
 }
