@@ -1152,7 +1152,7 @@ Transform:
   m_GameObject: {fileID: 1212761186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.17, y: 0.55, z: 0}
+  m_LocalPosition: {x: -9.17, y: 0.486, z: 0}
   m_LocalScale: {x: 0.51, y: 10.96, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1226,8 +1226,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281034900
-  m_fontColor: {r: 0.5803922, g: 0.40784314, b: 0.16862746, a: 1}
+    rgba: 4283072423
+  m_fontColor: {r: 0.654902, g: 0.49803922, b: 0.2901961, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
