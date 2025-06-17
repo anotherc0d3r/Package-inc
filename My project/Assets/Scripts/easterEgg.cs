@@ -3,34 +3,37 @@ using UnityEngine;
 public class EasterEgg : MonoBehaviour
 {
     public GameObject newPackage1;        // Assign your package prefab in Inspector
-    public RectTransform spawnArea;       // Assign a UI canvas RectTransform (optional)
+    public RectTransform spawnArea;       // Assign your UI Canvas RectTransform
 
-    public float spawnHeight = 6f;        // Default height if no canvas
-    public float spawnRange = 5f;         // Range for random X if no canvas
+    public float spawnHeight = 6f;        // Y-position above the top of the screen
+
+    public Camera uiCamera;               // Assign the camera used by your Canvas
 
     public void DropPackage()
     {
-        Vector3 spawnPosition;
+        if (spawnArea == null || uiCamera == null) return;
 
-        if (spawnArea != null)
-        {
-            // Get a random point within the RectTransform area
-            Vector2 localPoint = new Vector2(
-                Random.Range(spawnArea.rect.xMin, spawnArea.rect.xMax),
-                spawnArea.rect.yMax + 100f // Just above the top of the canvas
-            );
+        // Get the world corners of the RectTransform
+        Vector3[] corners = new Vector3[4];
+        spawnArea.GetWorldCorners(corners);
 
-            // Convert local canvas position to world position
-            spawnPosition = spawnArea.TransformPoint(localPoint);
-        }
-        else
-        {
-            // Fallback position if no spawn area is set
-            float randomX = Random.Range(-spawnRange, spawnRange);
-            spawnPosition = new Vector3(randomX, spawnHeight); // Removed z = 0f
-        }
+        // Left = corners[0], Right = corners[3]
+        float leftX = corners[0].x;
+        float rightX = corners[3].x;
 
+        // Pick a random X position between left and right
+        float randomX = Random.Range(leftX, rightX);
+
+        // Y spawn position slightly above top edge
+        float topY = corners[1].y;
+        float spawnY = topY + spawnHeight;
+
+        // Set spawn Z in front of camera (usually 0 for 2D)
+        float spawnZ = 0f;
+
+        Vector3 spawnPosition = new Vector3(randomX, spawnY, spawnZ);
         Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+
         Instantiate(newPackage1, spawnPosition, randomRotation);
     }
 }
