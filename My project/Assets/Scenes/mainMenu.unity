@@ -364,7 +364,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b46e7768693aa04480c71dba3e52646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPackage1: {fileID: 7226311975985868533, guid: fa053406751e5214ebbf239a5d9f5d6c, type: 3}
+  newPackage1: {fileID: 8846039387765831476, guid: 790ada82b0e0599479b262c4e8eacc51, type: 3}
+  newPackage2: {fileID: 5168681104191311759, guid: bdd14c46c40145d42968c11648dfb764, type: 3}
+  newPackage3: {fileID: 7379923402048821014, guid: 9ae8461c7ac6cab47882775fdfc36185, type: 3}
   spawnArea: {fileID: 507883727}
   spawnHeight: 6
   uiCamera: {fileID: 992227635}
@@ -1026,7 +1028,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 300, y: 75}
   m_EdgeRadius: 0
 --- !u!1 &1212761186
 GameObject:
@@ -1194,8 +1196,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 373.42285}
-  m_SizeDelta: {x: 1000, y: 131.9143}
+  m_AnchoredPosition: {x: 0, y: 295.33}
+  m_SizeDelta: {x: 1571.07, y: 288.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858373814
 MonoBehaviour:
@@ -1226,8 +1228,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283072423
-  m_fontColor: {r: 0.654902, g: 0.49803922, b: 0.2901961, a: 1}
+    rgba: 4285307585
+  m_fontColor: {r: 0.7568628, g: 0.6039216, b: 0.42352945, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1244,13 +1246,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 145.4
-  m_fontSizeBase: 145.4
+  m_fontSize: 201.88
+  m_fontSizeBase: 201.88
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1363,6 +1365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newPackage1: {fileID: 7226311975985868533, guid: fa053406751e5214ebbf239a5d9f5d6c, type: 3}
+  newPackage2: {fileID: 0}
+  newPackage3: {fileID: 0}
   spawnArea: {fileID: 4828718062078067447, guid: d6449d130802b8d4eac133898addf554, type: 3}
   spawnHeight: 6
   uiCamera: {fileID: 0}
@@ -2109,6 +2113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 929065264671868479, guid: e044c6b222af0874890140d5655acdf7, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4846014754226690928, guid: e044c6b222af0874890140d5655acdf7, type: 3}
       propertyPath: m_Name
       value: LevelLoader

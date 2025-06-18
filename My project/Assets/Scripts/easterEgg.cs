@@ -1,13 +1,27 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 
 public class EasterEgg : MonoBehaviour
 {
+
+    List<GameObject> packageList = new List<GameObject>();
     public GameObject newPackage1;        // Assign your package prefab in Inspector
+    public GameObject newPackage2;
+    public GameObject newPackage3;
     public RectTransform spawnArea;       // Assign your UI Canvas RectTransform
 
     public float spawnHeight = 6f;        // Y-position above the top of the screen
 
     public Camera uiCamera;               // Assign the camera used by your Canvas
+
+    void Start()                            // Add all packages to a list to randomise spawn
+    {
+        packageList.Add(newPackage1);
+        packageList.Add(newPackage2);
+        packageList.Add(newPackage3);
+    }
+
 
     public void DropPackage()
     {
@@ -34,6 +48,10 @@ public class EasterEgg : MonoBehaviour
         Vector3 spawnPosition = new Vector3(randomX, spawnY, spawnZ);
         Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
 
-        Instantiate(newPackage1, spawnPosition, randomRotation);
+        // Chooses a random package from the prefab index
+
+        int packageIndex = Random.Range(0, packageList.Count);
+        Instantiate(packageList[packageIndex], spawnPosition, randomRotation);
     }
+
 }
