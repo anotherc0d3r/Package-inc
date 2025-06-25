@@ -7,7 +7,8 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;  // Initial score
     private int highScore = 0;
 
-    private void Start() {
+    private void Start()
+    {
         highScore = PlayerPrefs.GetInt("High Score", 0);
     }
 
@@ -19,11 +20,13 @@ public class ScoreManager : MonoBehaviour
         CheckHighScore();
     }
 
-    public int GetScore() {
+    public int GetScore()
+    {
         return score;
     }
 
-    public int GetHighScore() {
+    public int GetHighScore()
+    {
         return highScore;
     }
     // Update the score text on the screen
@@ -32,11 +35,20 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = " " + score.ToString();
     }
 
-    private void CheckHighScore() {
-        if (score > highScore) {
+    // Check if highscore should be increased
+    private void CheckHighScore()
+    {
+        if (score > highScore)
+        {
             highScore = score;
+            //Saves highscore between sessions
             PlayerPrefs.SetInt("HighScore", highScore);
             PlayerPrefs.Save();
         }
+    }
+    
+        void UpdateHighScoreTable()
+    {
+        
     }
 }
