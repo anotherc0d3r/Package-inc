@@ -1171,6 +1171,14 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1471771146}
+    - target: {fileID: 2056964574962135925, guid: 89892fb3ecd6b1c4284a522a68d75053, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127474780169673119, guid: 89892fb3ecd6b1c4284a522a68d75053, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7698737529893468120, guid: 89892fb3ecd6b1c4284a522a68d75053, type: 3}
       propertyPath: m_Name
       value: LevelLoader 1
@@ -1266,8 +1274,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 201.88
-  m_fontSizeBase: 201.88
+  m_fontSize: 161.48
+  m_fontSizeBase: 161.48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

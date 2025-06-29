@@ -509,9 +509,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1300288292}
-        m_TargetAssemblyTypeName: endGameMenu, Assembly-CSharp
-        m_MethodName: Title
+      - m_Target: {fileID: 541085716}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadMainMenu3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3382,7 +3382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1300288291
 Transform:
   m_ObjectHideFlags: 0
@@ -4138,8 +4138,8 @@ Transform:
   m_Children:
   - {fileID: 1344361213}
   - {fileID: 414643148}
-  - {fileID: 998225810}
   - {fileID: 1153829993}
+  - {fileID: 998225810}
   - {fileID: 1089915115}
   - {fileID: 519173723}
   - {fileID: 447358080}
@@ -4480,9 +4480,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1300288292}
-        m_TargetAssemblyTypeName: endGameMenu, Assembly-CSharp
-        m_MethodName: Levels
+      - m_Target: {fileID: 541085716}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadLevelPick2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
