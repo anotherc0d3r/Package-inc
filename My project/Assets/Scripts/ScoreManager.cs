@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class ScoreManager : MonoBehaviour
         return score;
     }
 
+
     public int GetHighScore()
     {
         return highScore;
@@ -34,6 +36,7 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = " " + score.ToString();
     }
+
 
     // Check if highscore should be increased
     private void CheckHighScore()
@@ -46,9 +49,32 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
-    
-        void UpdateHighScoreTable()
+
+    // Add new score to highscore list
+    public void SubmitScore(string LevelName)
     {
-        
+        // Creates list to store highscores
+        List<int> highScores = new List<int>();
+
+        for (int i = 0; i < 4; i++)
+        {
+            //  loads top 4 scores from player prefs
+            highScores.Add(PlayerPrefs.GetInt(LevelName + "_highScore" + i, 0));
+        }
+
+        // Adds entry to list
+        highScores.Add(score);
+
+        // Sorts list 
+        highScores.Sort((a, b) => b.CompareTo(a)); // sorts list into descending order
+
+        // Save top 4 scores into player prefs
+        for (int i = 0; i < 4; i++)
+        {
+            PlayerPrefs.SetInt(LevelName + "_highScore" + i, highScores[i]);
+        }
+
+        PlayerPrefs.Save();
+        Debug.Log(highScores);
     }
 }

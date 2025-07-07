@@ -60,5 +60,8 @@ public class timerScript : MonoBehaviour
 
         // Reset package spawn rate
         spawnScript.resetSpawnRate();
+
+        //Saves score to highscore table
+        GameObject.FindWithTag("GameController").GetComponent<ScoreManager>().SubmitScore("Level1");
     }
 }
