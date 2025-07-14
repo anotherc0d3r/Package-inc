@@ -3356,6 +3356,10 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1344361214}
+    - target: {fileID: 6148552001221569985, guid: e520fbd173784ff49b2d9c221111e56d, type: 3}
+      propertyPath: correctPackageSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6069eeab623d84840a3abb4e0411edba, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3382,7 +3386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1300288291
 Transform:
   m_ObjectHideFlags: 0
@@ -3429,6 +3433,10 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1344361214}
+    - target: {fileID: 6618125452977614757, guid: 2c7cda89d5af8fd48a48b6e50f1aa54e, type: 3}
+      propertyPath: correctPackageSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d8bedddde67fbcf4a9ada98a900a1509, type: 3}
     - target: {fileID: 6760029336269983204, guid: 2c7cda89d5af8fd48a48b6e50f1aa54e, type: 3}
       propertyPath: m_Name
       value: OrangeDestination
@@ -5685,6 +5693,10 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1344361214}
+    - target: {fileID: 5620233882938163250, guid: b3b41430665bfd04fb50ab191128a805, type: 3}
+      propertyPath: correctPackageSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 974ae6c1f5bf7f243b5831b8c5285016, type: 3}
     - target: {fileID: 6202169629240918567, guid: b3b41430665bfd04fb50ab191128a805, type: 3}
       propertyPath: m_Name
       value: blueDestination

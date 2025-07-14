@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 736356720996974382}
   - component: {fileID: 900650850663781806}
   m_Layer: 3
-  m_Name: packageRed
+  m_Name: packageOrange
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 18cd290dc96c808408172085bdf8980c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8bedddde67fbcf4a9ada98a900a1509, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,7 +154,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85125, y: 0.85125}
+    oldSize: {x: 6.81, y: 6.81}
     newSize: {x: 0.85125, y: 0.85125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
