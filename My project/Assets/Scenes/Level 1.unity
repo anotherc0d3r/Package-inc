@@ -1247,8 +1247,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 60
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 10e0ba82f3a1b1147bd2db2b49cbdd44, type: 2}
-  m_sharedMaterial: {fileID: 5459653048418640, guid: 10e0ba82f3a1b1147bd2db2b49cbdd44, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3076,8 +3076,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 10e0ba82f3a1b1147bd2db2b49cbdd44, type: 2}
-  m_sharedMaterial: {fileID: 5459653048418640, guid: 10e0ba82f3a1b1147bd2db2b49cbdd44, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3351,6 +3351,14 @@ PrefabInstance:
     - target: {fileID: 4134946344727269534, guid: e520fbd173784ff49b2d9c221111e56d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264244032748529148, guid: e520fbd173784ff49b2d9c221111e56d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 232f212fc5011a24ca43ec27d7b7aca9, type: 3}
+    - target: {fileID: 4264244032748529148, guid: e520fbd173784ff49b2d9c221111e56d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6148552001221569985, guid: e520fbd173784ff49b2d9c221111e56d, type: 3}
       propertyPath: scoreManager
@@ -5832,6 +5840,22 @@ PrefabInstance:
     - target: {fileID: 1866304319455497699, guid: 307672676b17d1640a4b208ec8278f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839289092533989881, guid: 307672676b17d1640a4b208ec8278f07, type: 3}
+      propertyPath: m_Size.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839289092533989881, guid: 307672676b17d1640a4b208ec8278f07, type: 3}
+      propertyPath: m_Size.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839289092533989881, guid: 307672676b17d1640a4b208ec8278f07, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 494cc7f14d30e0a48bef39df8161aa7c, type: 3}
+    - target: {fileID: 5839289092533989881, guid: 307672676b17d1640a4b208ec8278f07, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
