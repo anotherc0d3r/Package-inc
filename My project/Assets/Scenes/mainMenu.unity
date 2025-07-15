@@ -939,8 +939,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183208819}
   m_CullTransparentMesh: 1
---- !u!61 &1183208824
-BoxCollider2D:
+--- !u!70 &1183208824
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -972,18 +972,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 300, y: 75}
-  m_EdgeRadius: 0
+  m_Size: {x: 296.5, y: 72.96}
+  m_Direction: 1
 --- !u!1 &1212761186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,7 +1448,7 @@ MonoBehaviour:
   m_text: How To Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 10e0ba82f3a1b1147bd2db2b49cbdd44, type: 2}
-  m_sharedMaterial: {fileID: 5459653048418640, guid: 10e0ba82f3a1b1147bd2db2b49cbdd44, type: 2}
+  m_sharedMaterial: {fileID: 1363007716688847043, guid: 10e0ba82f3a1b1147bd2db2b49cbdd44, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1666,8 +1656,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974211322}
   m_CullTransparentMesh: 1
---- !u!61 &1974211327
-BoxCollider2D:
+--- !u!70 &1974211327
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1699,18 +1689,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 200, y: 63}
-  m_EdgeRadius: 0
+  m_Size: {x: 192.3, y: 61.96}
+  m_Direction: 1
 --- !u!1 &2006617751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,8 +1825,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006617751}
   m_CullTransparentMesh: 1
---- !u!61 &2006617756
-BoxCollider2D:
+--- !u!70 &2006617756
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1878,18 +1858,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 382, y: 91}
-  m_EdgeRadius: 0
+  m_Size: {x: 383.58, y: 90.82}
+  m_Direction: 1
 --- !u!1 &2068962927
 GameObject:
   m_ObjectHideFlags: 0
