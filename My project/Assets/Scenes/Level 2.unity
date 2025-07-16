@@ -4320,6 +4320,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Belt
       objectReference: {fileID: 0}
+    - target: {fileID: 6104958878046533359, guid: c0275d3695f52ee45a7b1e8810b14a14, type: 3}
+      propertyPath: m_Size.x
+      value: 1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104958878046533359, guid: c0275d3695f52ee45a7b1e8810b14a14, type: 3}
+      propertyPath: m_Size.y
+      value: 1.31
+      objectReference: {fileID: 0}
     - target: {fileID: 6692310049680259081, guid: c0275d3695f52ee45a7b1e8810b14a14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -998
