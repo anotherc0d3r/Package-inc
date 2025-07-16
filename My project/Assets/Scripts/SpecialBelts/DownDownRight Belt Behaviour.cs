@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DownDownLeftBeltBehaviour : MonoBehaviour
+public class DownDownRightBeltBehaviour : MonoBehaviour
 {
     public Sprite newSprite;  // The sprite to switch to
     private Sprite originalSprite;  // The original sprite
@@ -72,7 +72,7 @@ public class DownDownLeftBeltBehaviour : MonoBehaviour
                     itemPoint = new Vector2(itemBounds.min.x, itemBounds.max.y);
 
                     if (!bounds.Contains(itemPoint))
-                    {
+                    {   
                         continue;
                     }
                     itemBehaviour.MoveDown();
@@ -80,21 +80,21 @@ public class DownDownLeftBeltBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    // Move right then down
-                    itemPoint = new Vector2(itemBounds.max.x, itemBounds.max.y);
+                    // Move down then right
+                    itemPoint = new Vector2(itemBounds.min.x, itemBounds.max.y);
 
                     if (!bounds.Contains(itemPoint))
                     {
                         continue;
                     }
 
-                    if (this.transform.position.y - item.position.y < 0)
+                    if (item.position.y - this.transform.position.y > 0)
                     {
                         itemBehaviour.MoveDown();
                     }
                     else
                     {
-                        itemBehaviour.MoveLeft();
+                        itemBehaviour.MoveRight();
                     }
                 }
             }
