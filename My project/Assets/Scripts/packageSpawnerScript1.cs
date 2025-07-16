@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class packageSpawnerScript : MonoBehaviour
+public class packageSpawnerScript1 : MonoBehaviour
 {
     List<GameObject> packageList = new List<GameObject>();
     public GameObject packageBrown;
     public GameObject packageOrange;
     public GameObject packageBlue;
-    public GameObject fragileBrown;
-    public GameObject fragileOrange;
-    public GameObject fragileBlue;
+
     // Can change spawnRate from editor
     private float timer = 0;
     // To control spawn rates
@@ -26,9 +24,7 @@ public class packageSpawnerScript : MonoBehaviour
         packageList.Add(packageBrown);
         packageList.Add(packageBlue);
         packageList.Add(packageOrange);
-        packageList.Add(fragileBrown);
-        packageList.Add(fragileBlue);
-        packageList.Add(fragileOrange);
+
         // Resets current spawn rate
         currentSpawnRate = initialSpawnRate;
     }
@@ -47,7 +43,7 @@ public class packageSpawnerScript : MonoBehaviour
         else
         {
             //Chooses a random package from the prefab list
-            int packageIndex = UnityEngine.Random.Range(0, 6);
+            int packageIndex = UnityEngine.Random.Range(0, 3);
             Instantiate(packageList[packageIndex], transform.position, transform.rotation);
             timer = 0;
 

@@ -4961,6 +4961,9 @@ MonoBehaviour:
   packageBrown: {fileID: 2363876201986321417, guid: dc5be7772f7c21242b0ebc316946a8ad, type: 3}
   packageOrange: {fileID: 2363876201986321417, guid: 2bc3d94d8ff60ef459e8bc7ef0464535, type: 3}
   packageBlue: {fileID: 2363876201986321417, guid: c5848223136594e48ab22ac5f14302e3, type: 3}
+  fragileBrown: {fileID: 870543087364799295, guid: 55d22f8bb6cc96448903bff988826aec, type: 3}
+  fragileOrange: {fileID: 4941404184623874006, guid: 40864f4edab02b6458f37d503f7f5230, type: 3}
+  fragileBlue: {fileID: 7746202346799084911, guid: f0cbd53f2659f4c4f842cf5c0a6e6216, type: 3}
   initialSpawnRate: 4.5
   currentSpawnRate: 0
   difficulty: 0.03
@@ -5999,7 +6002,7 @@ MonoBehaviour:
   finalScoreText: {fileID: 690022965}
   endGamePanel: {fileID: 127906118}
   scoreManager: {fileID: 981201612}
-  spawnScript: {fileID: 1717643387}
+  spawnScript: {fileID: 0}
 --- !u!222 &2006576385
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1216,7 +1216,7 @@ MonoBehaviour:
   finalScoreText: {fileID: 452195396}
   endGamePanel: {fileID: 1300288290}
   scoreManager: {fileID: 1344361214}
-  spawnScript: {fileID: 588198067}
+  spawnScript: {fileID: 0}
 --- !u!222 &414643151
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1984,7 +1984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588198068}
-  - component: {fileID: 588198067}
+  - component: {fileID: 588198069}
   m_Layer: 0
   m_Name: packageSpawner
   m_TagString: Untagged
@@ -1992,24 +1992,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &588198067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588198066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 406583d18c547344c8914671dfce1e15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  packageBrown: {fileID: 2363876201986321417, guid: dc5be7772f7c21242b0ebc316946a8ad, type: 3}
-  packageOrange: {fileID: 2363876201986321417, guid: 2bc3d94d8ff60ef459e8bc7ef0464535, type: 3}
-  packageBlue: {fileID: 2363876201986321417, guid: c5848223136594e48ab22ac5f14302e3, type: 3}
-  initialSpawnRate: 4.5
-  currentSpawnRate: 0
-  difficulty: 0.03
 --- !u!4 &588198068
 Transform:
   m_ObjectHideFlags: 0
@@ -2025,6 +2007,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 541085715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &588198069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588198066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a658186200be245b6b328d3c77b4de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  packageBrown: {fileID: 2363876201986321417, guid: dc5be7772f7c21242b0ebc316946a8ad, type: 3}
+  packageOrange: {fileID: 2363876201986321417, guid: 2bc3d94d8ff60ef459e8bc7ef0464535, type: 3}
+  packageBlue: {fileID: 2363876201986321417, guid: c5848223136594e48ab22ac5f14302e3, type: 3}
+  initialSpawnRate: 4.5
+  currentSpawnRate: 0
+  difficulty: 0.03
 --- !u!4 &658334687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1866304319455497699, guid: 307672676b17d1640a4b208ec8278f07, type: 3}
