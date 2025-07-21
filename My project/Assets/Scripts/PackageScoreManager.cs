@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PackageManager : MonoBehaviour
 {
-    public string correctPackage1;  // The correct sprite for this destination
-    public string correctPackage2;  // Used for fragile packages, of multiple colours
-    public string correctPackage3;  // Used for fragile packages, of multiple colours
+    public Sprite correctSprite;  // The correct sprite for this destination
+//    public string correctPackage2;  // Used for fragile packages, of multiple colours
+//    public string correctPackage3;  // Used for fragile packages, of multiple colours
     public int scoreIncrement = 1;      // The amount to increment the score
     public ScoreManager scoreManager;    // Reference to the ScoreManager
 
@@ -18,7 +18,7 @@ public class PackageManager : MonoBehaviour
             if (packageRenderer != null)
             {
 
-                if (packageRenderer.sprite.name == correctPackage1 || packageRenderer.sprite.name == correctPackage2 || packageRenderer.sprite.name == correctPackage3)
+                if (packageRenderer.sprite == correctSprite) //|| packageRenderer.sprite.name == correctPackage2 || packageRenderer.sprite.name == correctPackage3)
                 {
                     scoreManager.AddScore(scoreIncrement);  // Update the score
                     Debug.Log("Correct package delivered! Score: " + scoreManager.score);
