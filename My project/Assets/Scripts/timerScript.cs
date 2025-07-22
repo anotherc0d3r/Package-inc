@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +13,11 @@ public class timerScript : MonoBehaviour
     public float timeRemaining;
     public TextMeshProUGUI timerText;   
     public bool gamePlay = true;
-    public TextMeshProUGUI finalScoreText; 
+ //   public TextMeshProUGUI finalScoreText; 
     public GameObject endGamePanel;
     public ScoreManager scoreManager;
     public packageSpawnerScript spawnScript;
-    
+ /*   
     private bool gameOverTriggered = false; // Flag to ensure GameOver() is called only once
 
     // Start is called before the first frame update
@@ -65,3 +65,4 @@ public class timerScript : MonoBehaviour
         GameObject.FindWithTag("GameController").GetComponent<ScoreManager>().SubmitScore("Level1");
     }
 }
+*/

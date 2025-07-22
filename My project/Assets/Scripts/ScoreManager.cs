@@ -37,7 +37,16 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = " " + score.ToString();
     }
 
+   /* void update()
+    {
+        if (score == 6)
+        {
+            allPackagesDelivered = true;
+    }
 
+
+
+   }*/
     // Check if highscore should be increased
     private void CheckHighScore()
     {
