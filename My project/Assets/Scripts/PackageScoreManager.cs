@@ -10,7 +10,7 @@ public class PackageManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision");
+   //     Debug.Log("collision");
         if (collision.gameObject.tag == "Item")
         {
             SpriteRenderer packageRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
