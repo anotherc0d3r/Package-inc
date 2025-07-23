@@ -171,8 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e313cb1b73caa4c4f969e52206c46eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctPackage1: newPackage3
-  correctPackage2: newPackage3
-  correctPackage3: newPackage3
+  correctSprite: {fileID: 21300000, guid: e5e944f2efe882e41b57635a4519314b, type: 3}
   scoreIncrement: 1
   scoreManager: {fileID: 6636867753353922165, guid: 1de671ec612717c4398e9346160173ec, type: 3}
+  deliverManager: {fileID: 0}
