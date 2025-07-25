@@ -1,54 +1,3 @@
-/*using UnityEngine;
-
-public class PackageManager : MonoBehaviour
-{
-
-    public int GetDeliveredCount()
-{
-    return packageDelivered;
-}
-
-    public Sprite correctSprite;  // The correct sprite for this destination
-//    public string correctPackage2;  // Used for fragile packages, of multiple colours
-//    public string correctPackage3;  // Used for fragile packages, of multiple colours
-    public int scoreIncrement = 1;      // The amount to increment the score
-    private int packageDelivered = 1;
-    public ScoreManager scoreManager;    // Reference to the ScoreManager
-    public packageSpawnerScript1 deliverManager;
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-   //     Debug.Log("collision");
-        if (collision.gameObject.tag == "Item")
-        {
-            SpriteRenderer packageRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
-
-             deliverManager.AddScore(packageDelivered);
-                Debug.Log("Delivered");
-
-
-            if (packageRenderer != null)
-            {
-                if (packageRenderer.sprite == correctSprite)
-                {
-                    scoreManager.AddScore(scoreIncrement);  // Update the score
-                    Debug.Log("Correct package delivered! Score: " + scoreManager.score);
-                }
-                else
-                {
-                    Debug.Log("Incorrect package delivered.");
-                }
-
-                // destroy the package after processing
-                Destroy(collision.gameObject);
-            }
-        }
-    }
-}
-*/
-
-
-
 using UnityEngine;
 
 public class PackageManager : MonoBehaviour
@@ -58,6 +7,24 @@ public class PackageManager : MonoBehaviour
 
     public ScoreManager scoreManager;            // Handles score shown to player
     public packageSpawnerScript1 spawnerScript;  // Reference to spawner script to track ALL deliveries
+
+
+void Start()
+{
+    if (spawnerScript == null)
+    {
+        spawnerScript = FindObjectOfType<packageSpawnerScript1>();
+
+        if (spawnerScript == null)
+        {
+            Debug.LogError("SpawnerScript not found in scene!");
+        }
+        else
+        {
+            Debug.Log("SpawnerScript auto-assigned successfully.");
+        }
+    }
+}
 
     void OnTriggerEnter2D(Collider2D collision)
     {

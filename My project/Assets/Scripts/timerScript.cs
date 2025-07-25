@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +11,13 @@ public class timerScript : MonoBehaviour
 {
     public float duration = 63;
     public float timeRemaining;
-    public TextMeshProUGUI timerText;   
+    public TextMeshProUGUI timerText;
     public bool gamePlay = true;
- //   public TextMeshProUGUI finalScoreText; 
+    //   public TextMeshProUGUI finalScoreText; 
     public GameObject endGamePanel;
     public ScoreManager scoreManager;
     public packageSpawnerScript spawnScript;
- /*   
+
     private bool gameOverTriggered = false; // Flag to ensure GameOver() is called only once
 
     // Start is called before the first frame update
@@ -34,20 +34,11 @@ public class timerScript : MonoBehaviour
             {
                 // DeltaTime is subtracted from timeRemaining
                 timeRemaining -= Time.deltaTime;
-
-                // Outputs timeRemaining to UI
-                timerText.text = timeRemaining.ToString("0");
-            }
-            else
-            {
-                // When the timer hits zero, trigger GameOver
-                gamePlay = false;
-                GameOver();
             }
         }
     }
-
-    void GameOver()
+}
+ /*   void GameOver()
     {
         gameOverTriggered = true; // Ensure this only runs once
         endGamePanel.SetActive(true);
