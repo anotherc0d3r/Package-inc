@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5620233882938163250}
   m_Layer: 0
   m_Name: blueDestination
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e313cb1b73caa4c4f969e52206c46eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSprite: {fileID: 21300000, guid: be0f0d4857cf21144abedb8efef5a328, type: 3}
+  correctSprites:
+  - {fileID: 21300000, guid: be0f0d4857cf21144abedb8efef5a328, type: 3}
   scoreIncrement: 1
   scoreManager: {fileID: 0}
-  deliverManager: {fileID: 0}
+  spawnerScript: {fileID: 0}

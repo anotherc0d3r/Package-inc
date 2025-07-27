@@ -4,16 +4,16 @@ using UnityEngine.UI;
 using TMPro;
 
 [System.Serializable]
-public class PackageType
+public class PackageType2
 {
     public string name;
     public GameObject prefab;
     public int count;
 }
 
-public class packageSpawnerScript1 : MonoBehaviour
+public class packageSpawnerScript2 : MonoBehaviour
 {
-    public List<PackageType> packageTypes = new List<PackageType>(); // New structured list
+    public List<PackageType2> packageTypes = new List<PackageType2>(); // New structured list
 
     private List<GameObject> spawnQueue = new List<GameObject>();
     private int spawnIndex = 0;
@@ -29,7 +29,7 @@ public class packageSpawnerScript1 : MonoBehaviour
     public GameObject endGamePanel;
     public ScoreManager scoreManager;
     public TextMeshProUGUI finalScoreText;
-    public packageSpawnerScript1 spawnScript;
+    public packageSpawnerScript2 spawnScript;
 
     private int totalDelivered = 0;
     public int deliveryGoal; // Automatically calculated in Start()
@@ -42,7 +42,7 @@ public class packageSpawnerScript1 : MonoBehaviour
         int totalSpawnCount = 0;
 
         // Build the spawn queue
-        foreach (PackageType type in packageTypes)
+        foreach (PackageType2 type in packageTypes)
         {
             for (int i = 0; i < type.count; i++)
             {
@@ -126,7 +126,7 @@ public class packageSpawnerScript1 : MonoBehaviour
             ScoreManager sm = gc.GetComponent<ScoreManager>();
             if (sm != null)
             {
-                sm.SubmitScore("Level1");
+                sm.SubmitScore("Level2");
             }
         }
 

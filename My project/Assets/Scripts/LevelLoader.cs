@@ -8,10 +8,11 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-
+ 
+  
     public void LoadLevelPick()
     {
-    //    Debug.Log("Transition is: " + transition);
+        //    Debug.Log("Transition is: " + transition);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
@@ -52,6 +53,30 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
         Time.timeScale = 1;
     }
+
+       public void LoadMainMenu4()
+    {
+        //    Debug.Log("Transition is: " + transition);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 4));
+        Time.timeScale = 1;
+    }
+
+         public void LoadLevelPick3()
+    {
+        //    Debug.Log("Transition is: " + transition);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 3));
+        Time.timeScale = 1;
+    }
+
+         public void LoadLevel2()
+    {
+        //    Debug.Log("Transition is: " + transition);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        Time.timeScale = 1;
+    }
+
+
+
     IEnumerator LoadLevel(int levelIndex) {
         //Play animation
         transition.SetTrigger("Start");

@@ -1,8 +1,11 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 
 public class PackageManager : MonoBehaviour
 {
-    public Sprite correctSprite;  // The correct sprite for this destination
+    //   public Sprite correctSprite;  // The correct sprite for this destination
+    public List<Sprite> correctSprites = new List<Sprite>(); // allows for multiple correct sprites
     public int scoreIncrement = 1; // How much to add for correct deliveries
 
     public ScoreManager scoreManager;            // Handles score shown to player
@@ -44,7 +47,9 @@ void Start()
             }
 
             // ✅ Check for score if correct
-            if (packageRenderer != null && packageRenderer.sprite == correctSprite)
+            if /*(packageRenderer != null && packageRenderer.sprite == correctSprite)*/
+            (packageRenderer != null && correctSprites.Contains(packageRenderer.sprite))
+
             {
                 scoreManager.AddScore(scoreIncrement);
                 Debug.Log("Correct package delivered! Score: " + scoreManager.score);
