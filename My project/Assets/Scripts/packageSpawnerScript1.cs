@@ -104,6 +104,7 @@ public class packageSpawnerScript1 : MonoBehaviour
         gameOverTriggered = true;
         yield return new WaitForSeconds(0.6f);
         gamePlay = false;
+        GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManager>().PauseMusic();
         GameOver();
     }
 
