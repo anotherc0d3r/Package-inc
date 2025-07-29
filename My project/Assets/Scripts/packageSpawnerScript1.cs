@@ -86,7 +86,7 @@ public class packageSpawnerScript1 : MonoBehaviour
             }
             else
             {
-                Debug.Log("All packages have been spawned.");
+           //     Debug.Log("All packages have been spawned.");
             }
         }
     }
@@ -94,7 +94,7 @@ public class packageSpawnerScript1 : MonoBehaviour
     public void NotifyPackageDelivered()
     {
         totalDelivered++;
-        Debug.Log("Total packages delivered: " + totalDelivered);
+       /// Debug.Log("Total packages delivered: " + totalDelivered);
 
         if (totalDelivered >= deliveryGoal && !gameOverTriggered)
         {
@@ -107,7 +107,7 @@ public class packageSpawnerScript1 : MonoBehaviour
         gameOverTriggered = true;
         yield return new WaitForSeconds(0.6f);
         gamePlay = false;
-        GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManager>().PauseMusic();
+        
         GameOver();
     }
 
@@ -118,6 +118,8 @@ public class packageSpawnerScript1 : MonoBehaviour
 
         int finalScore = scoreManager.GetScore();
         finalScoreText.text = "" + finalScore;
+
+        audioManager.instance.PlaySFX(audioManager.instance.levelCompleteSFX);
 
         if (spawnScript != null)
         {
