@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
+
+
+
 public class PackageManager : MonoBehaviour
 {
     //   public Sprite correctSprite;  // The correct sprite for this destination
@@ -10,24 +13,30 @@ public class PackageManager : MonoBehaviour
 
     public ScoreManager scoreManager;            // Handles score shown to player
     public packageSpawnerScript1 spawnerScript;  // Reference to spawner script to track ALL deliveries
+    audioManager audioManager;
 
 
-void Start()
-{
-    if (spawnerScript == null)
+private void Awake()
     {
-        spawnerScript = FindObjectOfType<packageSpawnerScript1>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManager>();
+    }
 
+    void Start()
+    {
         if (spawnerScript == null)
         {
-            Debug.LogError("SpawnerScript not found in scene!");
-        }
-        else
-        {
-            Debug.Log("SpawnerScript auto-assigned successfully.");
+            spawnerScript = FindObjectOfType<packageSpawnerScript1>();
+
+            if (spawnerScript == null)
+            {
+                Debug.LogError("SpawnerScript not found in scene!");
+            }
+            else
+            {
+                Debug.Log("SpawnerScript auto-assigned successfully.");
+            }
         }
     }
-}
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,6 +48,7 @@ void Start()
             if (spawnerScript != null)
             {
                 spawnerScript.NotifyPackageDelivered();  // NEW METHOD IN SPAWNER
+                audioManager.PlaySFX(audioManager.packageThud); //PLay sound effect
                 Debug.Log("Package delivered!");
             }
             else
