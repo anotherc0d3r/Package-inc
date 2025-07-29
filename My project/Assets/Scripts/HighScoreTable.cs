@@ -21,10 +21,12 @@ public class HighScoreTable : MonoBehaviour
     void Start()
     {
         // Display scores in UI
-        highScore0Text.text = PlayerPrefs.GetInt(LevelName + "HighScore0", 0).ToString("0");
-        highScore1Text.text = PlayerPrefs.GetInt(LevelName + "HighScore1", 0).ToString("0");
-        highScore2Text.text = PlayerPrefs.GetInt(LevelName + "HighScore2", 0).ToString("0");
-        highScore3Text.text = PlayerPrefs.GetInt(LevelName + "HighScore3", 0).ToString("0");
+        highScore0Text.text = PlayerPrefs.GetInt(LevelName + "_highScore0", 0).ToString("0");
+        highScore1Text.text = PlayerPrefs.GetInt(LevelName + "_highScore1", 0).ToString("0");
+        highScore2Text.text = PlayerPrefs.GetInt(LevelName + "_highScore2", 0).ToString("0");
+        highScore3Text.text = PlayerPrefs.GetInt(LevelName + "_highScore3", 0).ToString("0");
+        Debug.Log(highScore0Text);
+
 
     }
 }

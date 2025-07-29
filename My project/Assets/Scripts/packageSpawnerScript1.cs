@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 [System.Serializable]
 public class PackageType
@@ -34,6 +35,8 @@ public class packageSpawnerScript1 : MonoBehaviour
     private int totalDelivered = 0;
     public int deliveryGoal; // Automatically calculated in Start()
 
+    public GameObject LevelSelectLogic;
+
     void Start()
     {
         currentSpawnRate = initialSpawnRate;
@@ -55,7 +58,7 @@ public class packageSpawnerScript1 : MonoBehaviour
         for (int i = 0; i < spawnQueue.Count; i++)
         {
             GameObject temp = spawnQueue[i];
-            int randIndex = Random.Range(i, spawnQueue.Count);
+            int randIndex = UnityEngine.Random.Range(i, spawnQueue.Count);
             spawnQueue[i] = spawnQueue[randIndex];
             spawnQueue[randIndex] = temp;
         }
@@ -130,6 +133,8 @@ public class packageSpawnerScript1 : MonoBehaviour
             }
         }
 
+        levelComplete(1);
+
         Debug.Log("Game over");
     }
 
@@ -137,4 +142,12 @@ public class packageSpawnerScript1 : MonoBehaviour
     {
         currentSpawnRate = initialSpawnRate;
     }
+
+    public void levelComplete(int levelCompleted)
+    {
+        PlayerPrefs.SetInt("Unlockedlevel", levelCompleted + 1);
+        PlayerPrefs.Save();
+    }
+
 }
+

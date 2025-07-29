@@ -91,6 +91,14 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("howToPlay");
     }
+
+     public void LoadScoreBoard()
+    {
+        //    Debug.Log("Transition is: " + transition);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
+         Time.timeScale = 1;
+    } 
+
     public void QuitGame()
     {
         Application.Quit();
