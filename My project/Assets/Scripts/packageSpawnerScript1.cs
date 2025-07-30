@@ -133,9 +133,10 @@ public class packageSpawnerScript1 : MonoBehaviour
                 sm.SubmitScore("Level1");
             }
         }
+        //unlocks next level
+        levelComplete(2);
 
-        levelComplete(1);
-
+        Debug.Log("Unlockedlevel " + PlayerPrefs.GetInt("Unlockedlevel"));
         Debug.Log("Game over");
     }
 
@@ -144,9 +145,10 @@ public class packageSpawnerScript1 : MonoBehaviour
         currentSpawnRate = initialSpawnRate;
     }
 
+    // Sets Unlockedlevel to new value, unlocks level of that value 
     public void levelComplete(int levelCompleted)
     {
-        PlayerPrefs.SetInt("Unlockedlevel", levelCompleted + 1);
+        PlayerPrefs.SetInt("Unlockedlevel", levelCompleted);
         PlayerPrefs.Save();
     }
 

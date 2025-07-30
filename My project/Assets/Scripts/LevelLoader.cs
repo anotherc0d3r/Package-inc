@@ -95,7 +95,7 @@ public class LevelLoader : MonoBehaviour
      public void LoadScoreBoard()
     {
         //    Debug.Log("Transition is: " + transition);
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 4));
          Time.timeScale = 1;
     } 
 

@@ -4,10 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;   
 using TMPro;
+using System;
 public class levelMenu : MonoBehaviour
 {
 
     public TextMeshProUGUI highScoreText;
+    public SpriteRenderer levelSprite2;
+    public Sprite levelSpriteUnlocked2;
+    public SpriteRenderer levelSprite3;
+    public Sprite levelSpriteUnlocked3;
+
 
     void Start()
     {
@@ -19,7 +25,7 @@ public class levelMenu : MonoBehaviour
     private void Awake()
     {
         // Get unlocked levels from player prefs
-        int unlockedLevel = PlayerPrefs.GetInt("Unlocked level", 1);
+        int unlockedLevel = PlayerPrefs.GetInt("Unlockedlevel", 1);
         Debug.Log("Unlocked Level: " + unlockedLevel);
         Debug.Log("Buttons Length: " + buttons.Length);
         // Lock all levels but 1 initialy 
@@ -31,6 +37,15 @@ public class levelMenu : MonoBehaviour
         for (int i = 0; i < unlockedLevel; i++)
         {
             buttons[i].interactable = true;
+        }
+
+        if (PlayerPrefs.GetInt("Unlockedlevel") > 1)
+        {
+            changeLevelSprite2();
+        }
+           if (PlayerPrefs.GetInt("Unlockedlevel") > 2)
+        {
+            changeLevelSprite3();
         }
     }
     // Loads level based on number "Level 1"
@@ -44,6 +59,17 @@ public class levelMenu : MonoBehaviour
     {
         SceneManager.LoadScene("mainMenu");
     }
+
+    // Functions to change sprites of level buttons 
+    void changeLevelSprite2()
+    {
+        levelSprite2.sprite = levelSpriteUnlocked2;
+    }
+    void changeLevelSprite3()
+    {
+        levelSprite3.sprite = levelSpriteUnlocked3;
+    }
+
 
 }
 
