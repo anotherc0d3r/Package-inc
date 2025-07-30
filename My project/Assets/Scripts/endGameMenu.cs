@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class endGameMenu : MonoBehaviour
 {
     [SerializeField] GameObject endGamePanel;
+
 public void Restart()
 {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -22,3 +23,4 @@ public void Levels()
     Time.timeScale = 1;
 }
 }
+

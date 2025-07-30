@@ -6,10 +6,48 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 
 {
+
+
+
     public Animator transition;
     public float transitionTime = 1f;
- 
-  
+ private void Awake()
+{
+    SceneManager.sceneLoaded += OnSceneLoaded;
+}
+
+
+
+
+    /* private void Awake()
+   {
+       if (transition == null)
+       {
+           // Replace this with the actual name of your transition GameObject
+           GameObject transitionObj = GameObject.Find("BoxChange");
+
+           if (transitionObj != null)
+           {
+               transition = transitionObj.GetComponent<Animator>();
+           }
+           else
+           {
+               Debug.LogError("Transition Animator object not found in scene!");
+           }
+       }
+   }*/
+
+private void Start()
+{
+    AssignTransitionIfMissing();
+}
+
+private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    AssignTransitionIfMissing();
+}
+
+
     public void LoadLevelPick()
     {
         //    Debug.Log("Transition is: " + transition);
@@ -75,6 +113,22 @@ public class LevelLoader : MonoBehaviour
         Time.timeScale = 1;
     }
 
+
+private void AssignTransitionIfMissing()
+{
+    if (transition == null)
+    {
+        GameObject transitionObj = GameObject.Find("BoxChange"); // Replace with your actual GameObject name
+        if (transitionObj != null)
+        {
+            transition = transitionObj.GetComponent<Animator>();
+        }
+        else
+        {
+            Debug.LogError("Transition Animator object not found in scene: " + SceneManager.GetActiveScene().name);
+        }
+    }
+}
 
 
     IEnumerator LoadLevel(int levelIndex) {

@@ -16,9 +16,11 @@ public class PackageManager : MonoBehaviour
     audioManager audioManager;
 
 
-private void Awake()
+    private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManager>();
+       // audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManager>();
+        audioManager = audioManager.instance;
+
     }
 
     void Start()
@@ -29,11 +31,11 @@ private void Awake()
 
             if (spawnerScript == null)
             {
-                Debug.LogError("SpawnerScript not found in scene!");
+      //          Debug.LogError("SpawnerScript not found in scene!");
             }
             else
             {
-                Debug.Log("SpawnerScript auto-assigned successfully.");
+       //         Debug.Log("SpawnerScript auto-assigned successfully.");
             }
         }
     }
@@ -49,11 +51,11 @@ private void Awake()
             {
                 spawnerScript.NotifyPackageDelivered();  // NEW METHOD IN SPAWNER
                 audioManager.PlaySFX(audioManager.packageThud); //PLay sound effect
-                Debug.Log("Package delivered!");
+        //        Debug.Log("Package delivered!");
             }
             else
             {
-                Debug.LogWarning("SpawnerScript reference is missing.");
+     //           Debug.LogWarning("SpawnerScript reference is missing.");
             }
 
             // ✅ Check for score if correct
@@ -62,11 +64,11 @@ private void Awake()
 
             {
                 scoreManager.AddScore(scoreIncrement);
-                Debug.Log("Correct package delivered! Score: " + scoreManager.score);
+            //    Debug.Log("Correct package delivered! Score: " + scoreManager.score);
             }
             else
             {
-                Debug.Log("Incorrect package delivered.");
+         //       Debug.Log("Incorrect package delivered.");
             }
 
             Destroy(collision.gameObject);

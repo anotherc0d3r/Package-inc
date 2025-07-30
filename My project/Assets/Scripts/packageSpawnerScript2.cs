@@ -115,6 +115,8 @@ public class packageSpawnerScript2 : MonoBehaviour
         int finalScore = scoreManager.GetScore();
         finalScoreText.text = "" + finalScore;
 
+        audioManager.instance.PlaySFX(audioManager.instance.levelCompleteSFX);
+
         if (spawnScript != null)
         {
             spawnScript.resetSpawnRate();
