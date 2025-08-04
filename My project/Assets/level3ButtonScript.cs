@@ -4,12 +4,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class level1ButtonScript : MonoBehaviour
+public class level3ButtonScript : MonoBehaviour
 {
         private void OnMouseDown()
     {
-        Debug.Log("button1 presed");
-        SceneManager.LoadScene("Level 1");
+        Debug.Log("button3 presed");
+        SceneManager.LoadScene("Level 3");
     }
 
 }

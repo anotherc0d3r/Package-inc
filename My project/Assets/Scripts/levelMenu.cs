@@ -29,21 +29,22 @@ public class levelMenu : MonoBehaviour
         Debug.Log("Unlocked Level: " + unlockedLevel);
         Debug.Log("Buttons Length: " + buttons.Length);
         // Lock all levels but 1 initialy 
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            buttons[i].interactable = false;
+        /*   for (int i = 0; i < buttons.Length; i++)
+           {
+               buttons[i].interactable = false;
 
-        }
-        for (int i = 0; i < unlockedLevel; i++)
-        {
-            buttons[i].interactable = true;
-        }
+           }
+           for (int i = 0; i < unlockedLevel; i++)
+           {
+               buttons[i].interactable = true;
+           }   */
 
         if (PlayerPrefs.GetInt("Unlockedlevel") > 1)
         {
             changeLevelSprite2();
+            Debug.Log("Run changelevelSprite 2");
         }
-           if (PlayerPrefs.GetInt("Unlockedlevel") > 2)
+        if (PlayerPrefs.GetInt("Unlockedlevel") > 2)
         {
             changeLevelSprite3();
         }
@@ -64,12 +65,18 @@ public class levelMenu : MonoBehaviour
     void changeLevelSprite2()
     {
         levelSprite2.sprite = levelSpriteUnlocked2;
+        Debug.Log("Change Sprite 2");
     }
     void changeLevelSprite3()
     {
         levelSprite3.sprite = levelSpriteUnlocked3;
     }
 
+    public void resetUnlockedLevels()
+    {
+        PlayerPrefs.SetInt("Unlockedlevel", 1);
+        PlayerPrefs.Save();
+    }
 
 }
 
