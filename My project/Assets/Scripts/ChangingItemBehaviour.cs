@@ -29,10 +29,11 @@ public class ChangingItemBehaviour : MonoBehaviour
 
     void OnMouseDown()
     {
-
+        
       //  spriteRenderer.sprite = newSprite;
         if (spriteRenderer.sprite == originalSprite)
         {
+            audioManager.instance.PlaySFX(audioManager.instance.PackageOpened);
             spriteRenderer.sprite = newSprite;
         }
         else
