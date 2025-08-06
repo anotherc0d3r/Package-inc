@@ -16,7 +16,7 @@ public class audioManager : MonoBehaviour
     public AudioClip backgroundLevel;
     public AudioClip packageThud;
     public AudioClip levelCompleteSFX;
-
+    public AudioClip PackageOpened;
 
     private void Awake()
     {
