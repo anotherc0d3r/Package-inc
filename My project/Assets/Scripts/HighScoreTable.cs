@@ -7,25 +7,24 @@ using System;
 
 public class HighScoreTable : MonoBehaviour
 {
-    // Declare highscores to be displayed on table
+    // Declare highscore text array to be displayed on table
 
-    public TextMeshProUGUI highScore0Text;
-    public TextMeshProUGUI highScore1Text;
-    public TextMeshProUGUI highScore2Text;
-    public TextMeshProUGUI highScore3Text;
+    public TextMeshProUGUI[] highScoreTexts;
 
-
-    public string LevelName = "Level1";
+    public string LevelName;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("Level1_highScore0", 10);
         // Display scores in UI
-        highScore0Text.text = PlayerPrefs.GetInt(LevelName + "_highScore0", 0).ToString("0");
-        highScore1Text.text = PlayerPrefs.GetInt(LevelName + "_highScore1", 0).ToString("0");
-        highScore2Text.text = PlayerPrefs.GetInt(LevelName + "_highScore2", 0).ToString("0");
-        highScore3Text.text = PlayerPrefs.GetInt(LevelName + "_highScore3", 0).ToString("0");
-        Debug.Log(highScore0Text);
+    for (int i = 0; i < highScoreTexts.Length; i++)
+            {
+                // Set highscores and assign to array
+                int score = PlayerPrefs.GetInt(LevelName + "_highScore" + i, 0);
+                highScoreTexts[i].text = score.ToString("0");
+                Debug.Log("High Score" + i + score);
+            }
 
 
     }

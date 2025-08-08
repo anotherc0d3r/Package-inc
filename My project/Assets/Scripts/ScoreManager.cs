@@ -19,6 +19,7 @@ public class ScoreManager : MonoBehaviour
         score += amount;
         UpdateScoreText();
         CheckHighScore();
+        Debug.Log("Score.1: " + score);
     }
 
     public int GetScore()
@@ -62,6 +63,7 @@ public class ScoreManager : MonoBehaviour
 
         // Adds entry to list
         highScores.Add(score);
+        Debug.Log("Score.2: " + score);
 
         // Sorts list 
         highScores.Sort((a, b) => b.CompareTo(a)); // sorts list into descending order
@@ -71,8 +73,9 @@ public class ScoreManager : MonoBehaviour
         {
             PlayerPrefs.SetInt(LevelName + "_highScore" + i, highScores[i]);
         }
-
-        PlayerPrefs.Save();
-        Debug.Log(highScores);
+        // Log highscore table
+        /* PlayerPrefs.Save();
+         foreach( int x in highScores) {
+         Debug.Log( x.ToString());  */
     }
 }

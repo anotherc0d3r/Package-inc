@@ -121,16 +121,17 @@ public class packageSpawnerScript2 : MonoBehaviour
         {
             spawnScript.resetSpawnRate();
         }
-
-        GameObject gc = GameObject.FindWithTag("GameController");
-        if (gc != null)
+        
+        // Submit score to highscore table
+        if (scoreManager != null)
         {
-            ScoreManager sm = gc.GetComponent<ScoreManager>();
-            if (sm != null)
-            {
-                sm.SubmitScore("Level2");
-            }
+            scoreManager.SubmitScore("Level1");
         }
+        else
+        {
+            Debug.Log("ScoreManager not assigned");
+        }
+
         levelComplete(3);
         Debug.Log("Unlockedlevel " + PlayerPrefs.GetInt("Unlockedlevel"));
         
