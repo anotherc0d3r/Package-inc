@@ -342,7 +342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -115}
+  m_AnchoredPosition: {x: 21, y: -260}
   m_SizeDelta: {x: 395.5923, y: 53.1723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &37219428
@@ -408,6 +408,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6812810886112407495, guid: 848d0f72241741447ae707550cdf87b9, type: 3}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &39382119
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +433,7 @@ GameObject:
   - component: {fileID: 39382123}
   - component: {fileID: 39382122}
   - component: {fileID: 39382121}
+  - component: {fileID: 39382125}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -521,6 +534,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: -2
   m_TargetDisplay: 0
+--- !u!114 &39382125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39382119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fb8d92369c9424d95ea0b6a5ef653a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 524669321}
+  musicSlider: {fileID: 37219428}
+  sfxSlider: {fileID: 1690642361}
 --- !u!1 &96209076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2641,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 372060839}
         m_TargetAssemblyTypeName: soundMixerManager, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6812810886112407495, guid: 848d0f72241741447ae707550cdf87b9, type: 3}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
         m_MethodName: SetMasterVolume
         m_Mode: 0
         m_Arguments:
@@ -7178,7 +7218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -260}
+  m_AnchoredPosition: {x: 21, y: -115}
   m_SizeDelta: {x: 395.5923, y: 53.1723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690642361
@@ -7235,6 +7275,18 @@ MonoBehaviour:
       - m_Target: {fileID: 372060839}
         m_TargetAssemblyTypeName: soundMixerManager, Assembly-CSharp
         m_MethodName: SetSoundFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6812810886112407495, guid: 848d0f72241741447ae707550cdf87b9, type: 3}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
+        m_MethodName: SetSFXVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

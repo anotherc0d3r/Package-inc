@@ -106,6 +106,13 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         Time.timeScale = 1;
     }
 
+             public void LoadLevelPick4()
+    {
+        //    Debug.Log("Transition is: " + transition);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 4));
+        Time.timeScale = 1;
+    }
+
          public void LoadLevel2()
     {
         //    Debug.Log("Transition is: " + transition);

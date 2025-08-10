@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 78636175}
   - component: {fileID: 78636174}
   - component: {fileID: 78636178}
+  - component: {fileID: 78636179}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -367,6 +368,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78636173}
   m_CullTransparentMesh: 1
+--- !u!114 &78636179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78636173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fb8d92369c9424d95ea0b6a5ef653a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 185361612}
+  musicSlider: {fileID: 439551147}
+  sfxSlider: {fileID: 1116948738}
 --- !u!1 &93526906
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +799,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1654187236}
         m_TargetAssemblyTypeName: soundMixerManager, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6812810886112407495, guid: 848d0f72241741447ae707550cdf87b9, type: 3}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
         m_MethodName: SetMasterVolume
         m_Mode: 0
         m_Arguments:
@@ -1967,6 +1995,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1654187236}
         m_TargetAssemblyTypeName: soundMixerManager, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6812810886112407495, guid: 848d0f72241741447ae707550cdf87b9, type: 3}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
@@ -4340,6 +4380,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1654187236}
         m_TargetAssemblyTypeName: soundMixerManager, Assembly-CSharp
         m_MethodName: SetSoundFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6812810886112407495, guid: 848d0f72241741447ae707550cdf87b9, type: 3}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
+        m_MethodName: SetSFXVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
