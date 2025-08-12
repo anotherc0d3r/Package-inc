@@ -125,7 +125,7 @@ public class packageSpawnerScript2 : MonoBehaviour
         // Submit score to highscore table
         if (scoreManager != null)
         {
-            scoreManager.SubmitScore("Level1");
+            scoreManager.SubmitScore("Level2");
         }
         else
         {
