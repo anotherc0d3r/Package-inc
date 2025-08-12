@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ItemBehaviour : MonoBehaviour
 {
+    public Sprite newSprite;  // The sprite to switch to
+    private Sprite originalSprite;  // The original sprite
+    private SpriteRenderer spriteRenderer;  // Reference to the SpriteRenderer
     // Speed
     private float _speed = 1;
 
@@ -17,8 +20,24 @@ public class ItemBehaviour : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();  // Get the SpriteRenderer component
+        originalSprite = spriteRenderer.sprite;  // Store the original sprite
     }
 
+    void OnMouseDown()
+    {
+        
+      //  spriteRenderer.sprite = newSprite;
+        if (spriteRenderer.sprite == originalSprite)
+        {
+            audioManager.instance.PlaySFX(audioManager.instance.PackageOpened);
+            spriteRenderer.sprite = newSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = originalSprite;
+        }
+    }
     void Update()
     {
         if (moveDirection != Vector2.zero)

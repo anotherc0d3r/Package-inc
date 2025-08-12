@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class DownDownRightBeltBehaviour : MonoBehaviour
@@ -12,37 +13,37 @@ public class DownDownRightBeltBehaviour : MonoBehaviour
         originalSprite = spriteRenderer.sprite;  // Store the original sprite
     }
 
-  void OnMouseDown()
-{
-    // Check if there's a package on the belt
-    Bounds bounds = this.transform.GetComponent<Collider2D>().bounds;
-    Vector2 size = bounds.size;
-    Collider2D[] colliders = Physics2D.OverlapBoxAll(this.transform.position, size, 0);
-
-    bool packageOnBelt = false;
-
-    foreach (Collider2D collider in colliders)
+    void OnMouseDown()
     {
-        if (collider.tag == Tags.Item)
+        // Check if there's a package on the belt
+        Bounds bounds = this.transform.GetComponent<Collider2D>().bounds;
+        Vector2 size = bounds.size;
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(this.transform.position, size, 0);
+
+        bool packageOnBelt = false;
+
+        foreach (Collider2D collider in colliders)
         {
-            packageOnBelt = true;
-            break;
+            if (collider.tag == Tags.Item)
+            {
+                packageOnBelt = true;
+                break;
+            }
+        }
+
+        // If there's no package, allow sprite change
+        if (!packageOnBelt && spriteRenderer != null)
+        {
+            if (spriteRenderer.sprite == originalSprite)
+            {
+                spriteRenderer.sprite = newSprite;
+            }
+            else
+            {
+                spriteRenderer.sprite = originalSprite;
+            }
         }
     }
-
-    // If there's no package, allow sprite change
-    if (!packageOnBelt && spriteRenderer != null)
-    {
-        if (spriteRenderer.sprite == originalSprite)
-        {
-            spriteRenderer.sprite = newSprite;
-        }
-        else
-        {
-            spriteRenderer.sprite = originalSprite;
-        }
-    }
-}
 
     void Update()
     {
@@ -63,8 +64,19 @@ public class DownDownRightBeltBehaviour : MonoBehaviour
                 Bounds itemBounds = item.GetComponent<Collider2D>().bounds;
                 Vector2 itemPoint;
 
+                // Handle ItemBehaviour
                 ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
-                itemBehaviour.speed = 1f;
+                if (itemBehaviour != null)
+                {
+                    itemBehaviour.speed = 1f;
+                }
+
+                // Handle ChangingItemBehaviour
+                ChangingItemBehaviour changingItem = item.GetComponent<ChangingItemBehaviour>();
+                if (changingItem != null)
+                {
+                    changingItem.speed = 1f;
+                }
 
                 if (spriteRenderer.sprite == originalSprite)
                 {
@@ -72,40 +84,28 @@ public class DownDownRightBeltBehaviour : MonoBehaviour
                     itemPoint = new Vector2(itemBounds.min.x, itemBounds.max.y);
 
                     if (!bounds.Contains(itemPoint))
-                    {   
-                               
                         continue;
-                    }
-                    itemBehaviour.MoveDown();
 
+                    if (itemBehaviour != null) itemBehaviour.MoveDown();
+                    if (changingItem != null) changingItem.MoveDown();
                 }
                 else
                 {
-
-          //          Debug.Log("Switched to down-then-right movement");
-                    // Move down then right
+                    // Move Down then Right
                     itemPoint = new Vector2(itemBounds.min.x, itemBounds.max.y);
-
- /*                   if (!bounds.Contains(itemPoint))
-                    {
-                         Debug.Log("Item not within bounds yet");
-                        continue;
-                    }
-*/
 
                     if (item.position.y - this.transform.position.y > 0)
                     {
-     //                   Debug.Log("Moving Down");
-                        itemBehaviour.MoveDown();
+                        if (itemBehaviour != null) itemBehaviour.MoveDown();
+                        if (changingItem != null) changingItem.MoveDown();
                     }
                     else
                     {
-         //               Debug.Log("Moving Right");
-                        itemBehaviour.MoveRight();
+                        if (itemBehaviour != null) itemBehaviour.MoveRight();
+                        if (changingItem != null) changingItem.MoveRight();
                     }
                 }
             }
         }
     }
 }
-

@@ -18,7 +18,6 @@ public class PackageManager : MonoBehaviour
 
     private void Awake()
     {
-       // audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManager>();
         audioManager = audioManager.instance;
 
     }

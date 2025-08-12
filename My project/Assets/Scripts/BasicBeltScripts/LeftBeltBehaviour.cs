@@ -35,13 +35,13 @@ public class LeftBeltBehaviour : BeltBehaviour
                 Vector2 itemPoint = new Vector2(itemBounds.max.x, itemBounds.min.y);
 
                 // Always move the item if it is exactly or more on top of the collider
-                if (!bounds.Contains(itemPoint)) 
+                if (!bounds.Contains(itemPoint))
                 {
                     continue;
                 }
-                    ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
-                    itemBehaviour.speed = 1f;
-                    itemBehaviour.MoveLeft();
+                ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
+                itemBehaviour.speed = 1f;
+                itemBehaviour.MoveLeft();
                 
             }
         }

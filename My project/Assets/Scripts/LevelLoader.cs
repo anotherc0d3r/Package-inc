@@ -16,27 +16,6 @@ public class LevelLoader : MonoBehaviour
     SceneManager.sceneLoaded += OnSceneLoaded;
 }
 
-
-
-
-    /* private void Awake()
-   {
-       if (transition == null)
-       {
-           // Replace this with the actual name of your transition GameObject
-           GameObject transitionObj = GameObject.Find("BoxChange");
-
-           if (transitionObj != null)
-           {
-               transition = transitionObj.GetComponent<Animator>();
-           }
-           else
-           {
-               Debug.LogError("Transition Animator object not found in scene!");
-           }
-       }
-   }*/
-
 private void Start()
 {
     AssignTransitionIfMissing();
@@ -47,95 +26,109 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     AssignTransitionIfMissing();
 }
 
-
+//Main Menu to Level Pick
     public void LoadLevelPick()
     {
-        //    Debug.Log("Transition is: " + transition);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-        public void LoadHowToPlay()
+// Main Menu to How To Play
+    public void LoadHowToPlay()
     {
-    //    Debug.Log("Transition is: " + transition);
+ 
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
     }
 
-        public void LoadMainMenu2()
+// How to Play to Main Menu
+    public void LoadMainMenu2()
     {
-    //    Debug.Log("Transition is: " + transition);
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex -2));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
     }
-
+// Level Pick to Main Menu
            public void LoadMainMenu1()
     {
-    //    Debug.Log("Transition is: " + transition);
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex -1));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
     }
 
-             public void LoadLevel1()
-    {
-    //    Debug.Log("Transition is: " + transition);
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex +2));
-    }
-
+//Level 1 to Main Menu
     public void LoadMainMenu3()
     {
-        //    Debug.Log("Transition is: " + transition);
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 3));
-         Time.timeScale = 1;
-    }
 
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 3));
+        Time.timeScale = 1;
+    }
+// Level 2 to Main Menu
+         public void LoadMainMenu4()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 4));
+        Time.timeScale = 1;
+    }
+// Level 3 to MainMenu
+    public void LoadMainMenu5()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 6));
+        Time.timeScale = 1;
+    }
+// Level 1 to Level Pick
     public void LoadLevelPick2()
     {
-        //    Debug.Log("Transition is: " + transition);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
         Time.timeScale = 1;
     }
-
-       public void LoadMainMenu4()
+//  Level 2 to level pick
+    public void LoadLevelPick3()
     {
-        //    Debug.Log("Transition is: " + transition);
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 4));
-        Time.timeScale = 1;
-    }
-
-         public void LoadLevelPick3()
-    {
-        //    Debug.Log("Transition is: " + transition);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 3));
         Time.timeScale = 1;
     }
-
-             public void LoadLevelPick4()
+// Scoreboard to level Pick 
+    public void LoadLevelPick4()
     {
-        //    Debug.Log("Transition is: " + transition);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 4));
         Time.timeScale = 1;
     }
-
-         public void LoadLevel2()
+// Level 3 to level Pick 
+    public void LoadLevelPick5()
     {
-        //    Debug.Log("Transition is: " + transition);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 5));
+        Time.timeScale = 1;
+    }
+// Level Pick to level 1
+    public void LoadLevel1()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
+        Time.timeScale = 1;
+    }
+// Level 1 to Level 2
+    public void LoadLevel2()
+    {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        Time.timeScale = 1;
+    }
+// Level 2 to Level 3
+    public void LoadLevel3()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
         Time.timeScale = 1;
     }
 
 
+
 private void AssignTransitionIfMissing()
-{
-    if (transition == null)
     {
-        GameObject transitionObj = GameObject.Find("BoxChange"); // Replace with your actual GameObject name
-        if (transitionObj != null)
+        if (transition == null)
         {
-            transition = transitionObj.GetComponent<Animator>();
-        }
-        else
-        {
-            Debug.LogError("Transition Animator object not found in scene: " + SceneManager.GetActiveScene().name);
+            GameObject transitionObj = GameObject.Find("BoxChange"); // Replace with your actual GameObject name
+            if (transitionObj != null)
+            {
+                transition = transitionObj.GetComponent<Animator>();
+            }
+            else
+            {
+                Debug.LogError("Transition Animator object not found in scene: " + SceneManager.GetActiveScene().name);
+            }
         }
     }
-}
 
 
     IEnumerator LoadLevel(int levelIndex) {

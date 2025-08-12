@@ -46,6 +46,13 @@ public class DownRightBeltBehaviour : BeltBehaviour
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
                     itemBehaviour.speed = 1f;
                     itemBehaviour.MoveDown();
+
+                    ChangingItemBehaviour changingItem = item.GetComponent<ChangingItemBehaviour>();
+                    if (changingItem != null)
+                    {
+                        changingItem.speed = 1f;
+                        changingItem.MoveDown();
+                    }
                 }
 
                 //If the item has reached the origin point, move right
@@ -54,6 +61,13 @@ public class DownRightBeltBehaviour : BeltBehaviour
                     ItemBehaviour itemBehaviour = item.GetComponent<ItemBehaviour>();
                     itemBehaviour.speed = 1f;
                     itemBehaviour.MoveRight();
+                    
+                     ChangingItemBehaviour changingItem = item.GetComponent<ChangingItemBehaviour>();
+                if (changingItem != null)
+                {
+                    changingItem.speed = 1f;
+                    changingItem.MoveRight();
+                }
                 }
             }
         }
