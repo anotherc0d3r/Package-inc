@@ -39,7 +39,7 @@ public class packageSpawnerScript1 : MonoBehaviour
     public GameObject LevelSelectLogic;
     public string levelName;
 
-    public string levelName;
+ 
 
     void Start()
     {
