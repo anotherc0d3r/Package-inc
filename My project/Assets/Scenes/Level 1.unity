@@ -2605,6 +2605,7 @@ MonoBehaviour:
   deliveryGoal: 3
   LevelSelectLogic: {fileID: 541085709}
   levelName: Level 1
+  levelName: Level1
 --- !u!1 &619744810
 GameObject:
   m_ObjectHideFlags: 0

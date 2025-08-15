@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -38,8 +39,19 @@ public class packageSpawnerScript1 : MonoBehaviour
     public GameObject LevelSelectLogic;
     public string levelName;
 
+    public string levelName;
+
     void Start()
     {
+        StartCoroutine(PauseAfterDelay());
+
+        IEnumerator PauseAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+
+        Time.timeScale = 0;
+            Debug.Log("Level Paused");
+    }
         currentSpawnRate = initialSpawnRate;
 
         spawnQueue.Clear();
@@ -87,15 +99,16 @@ public class packageSpawnerScript1 : MonoBehaviour
             }
             else
             {
-           //     Debug.Log("All packages have been spawned.");
+                //     Debug.Log("All packages have been spawned.");
             }
         }
     }
-
+        
     public void NotifyPackageDelivered()
+
     {
         totalDelivered++;
-       /// Debug.Log("Total packages delivered: " + totalDelivered);
+        /// Debug.Log("Total packages delivered: " + totalDelivered);
 
         if (totalDelivered >= deliveryGoal && !gameOverTriggered)
         {
@@ -131,7 +144,7 @@ public class packageSpawnerScript1 : MonoBehaviour
         // Submit score to highscore table
         if (scoreManager != null)
         {
-            scoreManager.SubmitScore("Level1");
+            scoreManager.SubmitScore(levelName);
         }
         else
         {

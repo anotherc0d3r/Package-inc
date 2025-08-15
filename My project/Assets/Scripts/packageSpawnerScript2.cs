@@ -34,6 +34,7 @@ public class packageSpawnerScript2 : MonoBehaviour
     private int totalDelivered = 0;
     public int deliveryGoal; // Automatically calculated in Start()
 
+
     void Start()
     {
         currentSpawnRate = initialSpawnRate;
