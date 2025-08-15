@@ -16,8 +16,7 @@ public class HighScoreTable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("Level1_highScore0", 10);
-        // Display scores in UI
+    // Display scores in UI
     for (int i = 0; i < highScoreTexts.Length; i++)
             {
                 // Set highscores and assign to array
