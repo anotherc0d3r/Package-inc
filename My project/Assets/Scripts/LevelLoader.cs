@@ -131,7 +131,7 @@ private void AssignTransitionIfMissing()
     }
 
 
-    IEnumerator LoadLevel(int levelIndex) {
+public    IEnumerator LoadLevel(int levelIndex) {
         //Play animation
         transition.SetTrigger("Start");
     

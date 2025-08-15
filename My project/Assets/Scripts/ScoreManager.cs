@@ -50,32 +50,22 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Add new score to highscore list
-    public void SubmitScore(string LevelName)
-    {
-        // Creates list to store highscores
-        List<int> highScores = new List<int>();
+    public void SubmitScore(string levelName)
+{
+    List<int> highScores = new List<int>();
 
-        for (int i = 0; i < 4; i++)
-        {
-            //  loads top 4 scores from player prefs
-            highScores.Add(PlayerPrefs.GetInt(LevelName + "_highScore" + i, 0));
-        }
+    for (int i = 0; i < 4; i++)
+        highScores.Add(PlayerPrefs.GetInt(levelName + "_highScore" + i, 0));
 
-        // Adds entry to list
-        highScores.Add(score);
-        Debug.Log("Score.2: " + score);
+    highScores.Add(score);
+    highScores.Sort((a, b) => b.CompareTo(a));
 
-        // Sorts list 
-        highScores.Sort((a, b) => b.CompareTo(a)); // sorts list into descending order
+    for (int i = 0; i < 4; i++)
+        PlayerPrefs.SetInt(levelName + "_highScore" + i, highScores[i]);
 
-        // Save top 4 scores into player prefs
-        for (int i = 0; i < 4; i++)
-        {
-            PlayerPrefs.SetInt(LevelName + "_highScore" + i, highScores[i]);
-        }
-        // Log highscore table
-        /* PlayerPrefs.Save();
-         foreach( int x in highScores) {
-         Debug.Log( x.ToString());  */
-    }
+    // Also store the top score for easy access
+    PlayerPrefs.SetInt("HighScore_" + levelName, highScores[0]);
+    PlayerPrefs.Save();
+}
+
 }

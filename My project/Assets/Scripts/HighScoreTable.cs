@@ -18,14 +18,36 @@ public class HighScoreTable : MonoBehaviour
     {
         PlayerPrefs.SetInt("Level1_highScore0", 10);
         // Display scores in UI
-    for (int i = 0; i < highScoreTexts.Length; i++)
-            {
-                // Set highscores and assign to array
-                int score = PlayerPrefs.GetInt(LevelName + "_highScore" + i, 0);
-                highScoreTexts[i].text = score.ToString("0");
-                Debug.Log("High Score" + i + score);
-            }
+        for (int i = 0; i < highScoreTexts.Length; i++)
+        {
+            // Set highscores and assign to array
+            int score = PlayerPrefs.GetInt(LevelName + "_highScore" + i, 0);
+            highScoreTexts[i].text = score.ToString("0");
+            Debug.Log("High Score" + i + score);
+        }
 
+
+
+
+        PlayerPrefs.SetInt("Level2_highScore0", 10);
+        // Display scores in UI
+        for (int i = 0; i < highScoreTexts.Length; i++)
+        {
+            // Set highscores and assign to array
+            int score = PlayerPrefs.GetInt(LevelName + "_highScore" + i, 0);
+            highScoreTexts[i].text = score.ToString("0");
+            Debug.Log("High Score" + i + score);
+        }
+
+   PlayerPrefs.SetInt("Level3_highScore0", 10);
+        // Display scores in UI
+        for (int i = 0; i < highScoreTexts.Length; i++)
+        {
+            // Set highscores and assign to array
+            int score = PlayerPrefs.GetInt(LevelName + "_highScore" + i, 0);
+            highScoreTexts[i].text = score.ToString("0");
+            Debug.Log("High Score" + i + score);
+        }
 
     }
 }

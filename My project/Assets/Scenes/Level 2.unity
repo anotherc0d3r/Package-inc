@@ -3618,13 +3618,14 @@ GameObject:
   - component: {fileID: 742403262}
   - component: {fileID: 742403261}
   - component: {fileID: 742403260}
+  - component: {fileID: 742403263}
   m_Layer: 5
   m_Name: nextLevelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &742403259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3739,6 +3740,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742403258}
   m_CullTransparentMesh: 1
+--- !u!114 &742403263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742403258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746befbfb0db8cf47a0b1fdf98690986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Level 2
+  previousLevelName: Level 1
+  requiredScore: 3
+  spriteRenderer: {fileID: 0}
+  unlockedSprite: {fileID: 0}
+  lockedSprite: {fileID: 0}
 --- !u!1 &766617500
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,7 +4232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012207, y: -2.03}
+  m_AnchoredPosition: {x: -0.000012207, y: 0.38}
   m_SizeDelta: {x: 150, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957126211
@@ -6231,7 +6250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000030518, y: -4.4}
+  m_AnchoredPosition: {x: 0.0000030518, y: -2.03}
   m_SizeDelta: {x: 150, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543174870
@@ -6515,6 +6534,7 @@ MonoBehaviour:
   spawnScript: {fileID: 1555951844}
   deliveryGoal: 6
   LevelSelectLogic: {fileID: 0}
+  levelName: Level 2
 --- !u!4 &1556110199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1866304319455497699, guid: 307672676b17d1640a4b208ec8278f07, type: 3}

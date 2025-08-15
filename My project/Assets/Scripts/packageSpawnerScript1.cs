@@ -36,6 +36,7 @@ public class packageSpawnerScript1 : MonoBehaviour
     public int deliveryGoal; // Automatically calculated in Start()
 
     public GameObject LevelSelectLogic;
+    public string levelName;
 
     void Start()
     {
@@ -115,6 +116,7 @@ public class packageSpawnerScript1 : MonoBehaviour
     {
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
+          scoreManager.SubmitScore(levelName);
 
         int finalScore = scoreManager.GetScore();
         finalScoreText.text = "" + finalScore;

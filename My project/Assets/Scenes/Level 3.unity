@@ -6109,6 +6109,7 @@ MonoBehaviour:
   spawnScript: {fileID: 1555951844}
   deliveryGoal: 9
   LevelSelectLogic: {fileID: 0}
+  levelName: Level 3
 --- !u!1 &1638228487
 GameObject:
   m_ObjectHideFlags: 0
