@@ -130,6 +130,7 @@ public class packageSpawnerScript1 : MonoBehaviour
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
           scoreManager.SubmitScore(levelName);
+ 
 
         int finalScore = scoreManager.GetScore();
         finalScoreText.text = "" + finalScore;
