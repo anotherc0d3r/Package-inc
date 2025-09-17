@@ -3904,7 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level 2
-  previousLevelName: Level 1
+  levelNumber: 0
   requiredScore: 3
   spriteRenderer: {fileID: 0}
   unlockedSprite: {fileID: 0}
@@ -6749,6 +6749,7 @@ MonoBehaviour:
   spawnScript: {fileID: 1555951844}
   deliveryGoal: 6
   LevelSelectLogic: {fileID: 0}
+  levelName: Level 2
 --- !u!4 &1556110199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1866304319455497699, guid: 307672676b17d1640a4b208ec8278f07, type: 3}

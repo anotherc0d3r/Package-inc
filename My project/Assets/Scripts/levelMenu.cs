@@ -38,3 +38,19 @@ PlayerPrefs.Save();
         PlayerPrefs.Save();
     }
 }
+/*
+
+using UnityEngine;
+
+public class LevelMenu : MonoBehaviour
+{
+    void Awake()
+    {
+        if (!PlayerPrefs.HasKey("Unlockedlevel"))
+        {
+            PlayerPrefs.SetInt("Unlockedlevel", 1); // Level 1 always unlocked
+            PlayerPrefs.Save();
+        }
+    }
+}
+*/

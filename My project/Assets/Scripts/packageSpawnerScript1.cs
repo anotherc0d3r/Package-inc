@@ -125,12 +125,46 @@ public class packageSpawnerScript1 : MonoBehaviour
         GameOver();
     }
 
+    /*   void GameOver()
+       {
+           endGamePanel.SetActive(true);
+           Time.timeScale = 0;
+             scoreManager.SubmitScore(levelName);
+
+
+           int finalScore = scoreManager.GetScore();
+           finalScoreText.text = "" + finalScore;
+
+           audioManager.instance.PlaySFX(audioManager.instance.levelCompleteSFX);
+
+           if (spawnScript != null)
+           {
+               spawnScript.resetSpawnRate();
+           }
+
+           // Submit score to highscore table
+           if (scoreManager != null)
+           {
+               scoreManager.SubmitScore(levelName);
+           }
+           else
+           {
+               Debug.Log("ScoreManager not assigned");
+           }
+
+           //unlocks next level
+           levelComplete(2);
+
+           Debug.Log("Unlockedlevel " + PlayerPrefs.GetInt("Unlockedlevel"));
+           Debug.Log("Game over");
+       }
+   */
+
     void GameOver()
     {
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
-          scoreManager.SubmitScore(levelName);
- 
+        scoreManager.SubmitScore(levelName);
 
         int finalScore = scoreManager.GetScore();
         finalScoreText.text = "" + finalScore;
@@ -138,10 +172,31 @@ public class packageSpawnerScript1 : MonoBehaviour
         audioManager.instance.PlaySFX(audioManager.instance.levelCompleteSFX);
 
         if (spawnScript != null)
-        {
             spawnScript.resetSpawnRate();
+
+        // Unlock next level only if required score met
+        int requiredScore = PlayerPrefs.GetInt(levelName + "_RequiredScore", 0);
+        // You can also hardcode or assign required score per level if you want
+
+        if (finalScore >= requiredScore)
+        {
+            int currentLevel = int.Parse(levelName.Split(' ')[1]); // assumes names like "Level 1"
+            int nextLevel = currentLevel + 1;
+
+            levelComplete(nextLevel);  // Updates Unlockedlevel
+            Debug.Log("Unlocked Level " + nextLevel);
+        }
+        else
+        {
+            Debug.Log("Score not high enough to unlock next level!");
         }
 
+        endGameMenu menu = endGamePanel.GetComponent<endGameMenu>();
+    if (menu != null)
+    {
+        menu.SetFinalScore(finalScore);  
+    }
+        
         // Submit score to highscore table
         if (scoreManager != null)
         {
@@ -151,13 +206,7 @@ public class packageSpawnerScript1 : MonoBehaviour
         {
             Debug.Log("ScoreManager not assigned");
         }
-                
-        //unlocks next level
-        levelComplete(2);
-
-        Debug.Log("Unlockedlevel " + PlayerPrefs.GetInt("Unlockedlevel"));
-        Debug.Log("Game over");
-    }
+}
 
     public void resetSpawnRate()
     {

@@ -2802,6 +2802,7 @@ MonoBehaviour:
   spawnScript: {fileID: 588198069}
   deliveryGoal: 3
   LevelSelectLogic: {fileID: 541085709}
+  levelName: Level 1
 --- !u!1 &619744810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level 1
-  previousLevelName: 
+  levelNumber: 0
   requiredScore: 0
   spriteRenderer: {fileID: 0}
   unlockedSprite: {fileID: 0}
