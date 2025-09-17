@@ -47,7 +47,7 @@ public class packageSpawnerScript1 : MonoBehaviour
 
         IEnumerator PauseAfterDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         Time.timeScale = 0;
             Debug.Log("Level Paused");

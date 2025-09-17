@@ -2635,7 +2635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &509004418
 Transform:
   m_ObjectHideFlags: 0
@@ -3904,7 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level 2
-  levelNumber: 0
+  previousLevelName: 
   requiredScore: 3
   spriteRenderer: {fileID: 0}
   unlockedSprite: {fileID: 0}
@@ -5715,7 +5715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311219401}
   - component: {fileID: 1311219403}
-  - component: {fileID: 1311219402}
+  - component: {fileID: 1311219404}
   m_Layer: 0
   m_Name: howToPlay
   m_TagString: Untagged
@@ -5742,19 +5742,6 @@ Transform:
   - {fileID: 1924404291}
   m_Father: {fileID: 39382120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1311219402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311219400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac1cfe9dfd9ecc4eb687db113d680d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1311219400}
 --- !u!114 &1311219403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5769,6 +5756,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 606193386}
   transitionTime: 1
+--- !u!114 &1311219404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311219400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b181b24a603bb9d47a5a4574e92cfa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  howToPlay: {fileID: 1311219400}
+  GameUI: {fileID: 509004417}
 --- !u!1 &1375154836
 GameObject:
   m_ObjectHideFlags: 0
@@ -8299,8 +8300,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1311219402}
-        m_TargetAssemblyTypeName: pauseLogic, Assembly-CSharp
+      - m_Target: {fileID: 1311219404}
+        m_TargetAssemblyTypeName: howToPlayButtons, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:

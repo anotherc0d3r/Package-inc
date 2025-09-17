@@ -2611,7 +2611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &509004418
 Transform:
   m_ObjectHideFlags: 0
@@ -3374,7 +3374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632616484}
   - component: {fileID: 632616486}
-  - component: {fileID: 632616485}
+  - component: {fileID: 632616487}
   m_Layer: 0
   m_Name: howToPlay
   m_TagString: Untagged
@@ -3401,19 +3401,6 @@ Transform:
   - {fileID: 1343978875}
   m_Father: {fileID: 39382120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &632616485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632616483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac1cfe9dfd9ecc4eb687db113d680d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 632616483}
 --- !u!114 &632616486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3428,6 +3415,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 0}
   transitionTime: 1
+--- !u!114 &632616487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632616483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b181b24a603bb9d47a5a4574e92cfa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  howToPlay: {fileID: 632616483}
+  GameUI: {fileID: 509004417}
 --- !u!1 &684715819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,8 +5503,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 632616485}
-        m_TargetAssemblyTypeName: pauseLogic, Assembly-CSharp
+      - m_Target: {fileID: 632616487}
+        m_TargetAssemblyTypeName: howToPlayButtons, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -8704,6 +8705,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGamePanel: {fileID: 2030204392}
+  nextButton: {fileID: 0}
+  requiredScoreForNext: 0
+  currentLevelName: 
+  nextLevelName: 
 --- !u!114 &2030204396
 MonoBehaviour:
   m_ObjectHideFlags: 0

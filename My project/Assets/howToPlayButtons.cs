@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 public class howToPlayButtons : MonoBehaviour
 {
         [SerializeField] GameObject howToPlay;
+        [SerializeField] GameObject GameUI;
     public void Resume()
     {
-        
+
         GameObject.FindGameObjectWithTag("Audio").GetComponent<audioManager>().ResumeMusic();
         howToPlay.SetActive(false);
+        GameUI.SetActive(true);
         Time.timeScale = 1;
         Debug.Log("Level unpaused");
     }

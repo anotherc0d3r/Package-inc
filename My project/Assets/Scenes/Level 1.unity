@@ -2215,6 +2215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   howToPlay: {fileID: 441690707}
+  GameUI: {fileID: 1667502429}
 --- !u!1 &447358079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +3070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level 1
-  levelNumber: 0
+  previousLevelName: 
   requiredScore: 0
   spriteRenderer: {fileID: 0}
   unlockedSprite: {fileID: 0}
@@ -6507,7 +6508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1667502430
 Transform:
   m_ObjectHideFlags: 0
