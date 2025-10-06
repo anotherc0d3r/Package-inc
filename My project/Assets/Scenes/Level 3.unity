@@ -8709,6 +8709,8 @@ MonoBehaviour:
   requiredScoreForNext: 0
   currentLevelName: 
   nextLevelName: 
+  levelComplete: {fileID: 0}
+  almostThere: {fileID: 0}
 --- !u!114 &2030204396
 MonoBehaviour:
   m_ObjectHideFlags: 0

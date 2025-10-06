@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
 public class PackageType
@@ -183,13 +185,21 @@ public class packageSpawnerScript1 : MonoBehaviour
             int currentLevel = int.Parse(levelName.Split(' ')[1]); // assumes names like "Level 1"
             int nextLevel = currentLevel + 1;
 
-            levelComplete(nextLevel);  // Updates Unlockedlevel
-            Debug.Log("Unlocked Level " + nextLevel);
+                if (nextLevel <= SceneManager.sceneCountInBuildSettings)
+            {
+
+                levelComplete(nextLevel);  // Updates Unlockedlevel
+                Debug.Log("Unlocked Level " + nextLevel);
+            }
+                else
+            {
+                Debug.Log("All levels complete! No next level to unlock.");
+            }
         }
-        else
-        {
-            Debug.Log("Score not high enough to unlock next level!");
-        }
+            else
+            {
+                Debug.Log("Score not high enough to unlock next level!");
+            }
 
         endGameMenu menu = endGamePanel.GetComponent<endGameMenu>();
     if (menu != null)

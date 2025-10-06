@@ -11,6 +11,8 @@ public class endGameMenu : MonoBehaviour
     [SerializeField] int requiredScoreForNext; // 👈 set required score for NEXT level
     [SerializeField] string currentLevelName;  // 👈 e.g. "Level 1"
     [SerializeField] string nextLevelName;     // 👈 e.g. "Level 2"
+    [SerializeField] GameObject levelComplete;  // 👈 assign in Inspector
+    [SerializeField] GameObject almostThere;  // 👈 assign in Inspector
     private int lastFinalScore = 0;
 
   /*  public void ShowEndMenu()
@@ -60,12 +62,22 @@ public class endGameMenu : MonoBehaviour
     {
         if (nextButton != null)
             nextButton.SetActive(true);
+        if(levelComplete != null)
+            levelComplete.SetActive(true);
+        if(almostThere != null)
+            almostThere.SetActive(false);
+
         Debug.Log("Next button Active, score reached");
     }
     else
     {
         if (nextButton != null)
             nextButton.SetActive(false);
+            if (almostThere != null)
+            almostThere.SetActive(true);
+        if (levelComplete != null)
+            levelComplete.SetActive(false);
+  
         Debug.Log("Next button Not active, score not reached");
     }
 }
