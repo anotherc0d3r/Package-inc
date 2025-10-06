@@ -8,8 +8,8 @@ public class LevelMenu : MonoBehaviour
     public SpriteRenderer levelSprite3;
     public Sprite levelSpriteUnlocked3;
 
-    public int scoreToUnlockLevel2 = 3;
-    public int scoreToUnlockLevel3 = 6;
+    public int scoreToUnlockLevel2 = 18;
+    public int scoreToUnlockLevel3 = 22;
 
     void Awake()
     {

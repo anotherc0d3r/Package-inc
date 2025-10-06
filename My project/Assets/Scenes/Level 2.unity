@@ -3945,8 +3945,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 828, y: 422}
-  m_SizeDelta: {x: 90.1113, y: 64.1128}
+  m_AnchoredPosition: {x: 860.21265, y: 422}
+  m_SizeDelta: {x: 154.5364, y: 64.1128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766617502
 MonoBehaviour:
@@ -4045,7 +4045,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 15.815796, y: 0, z: 1.6062012, w: 0}
+  m_margin: {x: 15.815796, y: 0, z: -3.9962158, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6859,31 +6859,31 @@ MonoBehaviour:
   packageTypes:
   - name: Blue package
     prefab: {fileID: 2363876201986321417, guid: c5848223136594e48ab22ac5f14302e3, type: 3}
-    count: 1
+    count: 4
   - name: Brown package
     prefab: {fileID: 2363876201986321417, guid: dc5be7772f7c21242b0ebc316946a8ad, type: 3}
-    count: 1
+    count: 6
   - name: Orange package
     prefab: {fileID: 2363876201986321417, guid: 2bc3d94d8ff60ef459e8bc7ef0464535, type: 3}
-    count: 1
+    count: 5
   - name: Blue fragile package
     prefab: {fileID: 7746202346799084911, guid: f0cbd53f2659f4c4f842cf5c0a6e6216, type: 3}
-    count: 1
+    count: 4
   - name: Brown fragile package
     prefab: {fileID: 870543087364799295, guid: 55d22f8bb6cc96448903bff988826aec, type: 3}
-    count: 1
+    count: 3
   - name: Orange fragile package
     prefab: {fileID: 4941404184623874006, guid: 40864f4edab02b6458f37d503f7f5230, type: 3}
-    count: 1
+    count: 3
   initialSpawnRate: 4.5
   currentSpawnRate: 0
-  difficulty: 0.03
+  difficulty: 0.015
   gamePlay: 1
   endGamePanel: {fileID: 2030204392}
   scoreManager: {fileID: 556872327}
   finalScoreText: {fileID: 397060677}
   spawnScript: {fileID: 1555951844}
-  deliveryGoal: 6
+  deliveryGoal: 25
   LevelSelectLogic: {fileID: 0}
   levelName: Level 2
 --- !u!4 &1556110199 stripped

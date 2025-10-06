@@ -2786,13 +2786,13 @@ MonoBehaviour:
   packageTypes:
   - name: Blue package
     prefab: {fileID: 2363876201986321417, guid: c5848223136594e48ab22ac5f14302e3, type: 3}
-    count: 1
+    count: 8
   - name: Brown package
     prefab: {fileID: 2363876201986321417, guid: dc5be7772f7c21242b0ebc316946a8ad, type: 3}
-    count: 1
+    count: 6
   - name: Orange package
     prefab: {fileID: 2363876201986321417, guid: 2bc3d94d8ff60ef459e8bc7ef0464535, type: 3}
-    count: 1
+    count: 6
   initialSpawnRate: 4.5
   currentSpawnRate: 0
   difficulty: 0.03
@@ -2801,7 +2801,7 @@ MonoBehaviour:
   scoreManager: {fileID: 1344361214}
   finalScoreText: {fileID: 1912061292}
   spawnScript: {fileID: 588198069}
-  deliveryGoal: 3
+  deliveryGoal: 20
   LevelSelectLogic: {fileID: 541085709}
   levelName: Level 1
 --- !u!1 &619744810
@@ -4902,8 +4902,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 828, y: 422}
-  m_SizeDelta: {x: 90.1113, y: 64.1128}
+  m_AnchoredPosition: {x: 856.011, y: 422}
+  m_SizeDelta: {x: 146.1333, y: 64.1128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153829994
 MonoBehaviour:
@@ -5002,7 +5002,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 15.815796, y: 0, z: 1.6062012, w: 0}
+  m_margin: {x: 15.815796, y: 0, z: -1.1950684, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
