@@ -3624,8 +3624,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 858.812, y: 422}
-  m_SizeDelta: {x: 151.7354, y: 64.1128}
+  m_AnchoredPosition: {x: 858.812, y: 424.5}
+  m_SizeDelta: {x: 151.7354, y: 81.6311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766617502
 MonoBehaviour:
@@ -3696,7 +3696,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5184,11 +5184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7784753762549582527, guid: 2c7cda89d5af8fd48a48b6e50f1aa54e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2400293
+      value: 1.974
       objectReference: {fileID: 0}
     - target: {fileID: 7784753762549582527, guid: 2c7cda89d5af8fd48a48b6e50f1aa54e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.01
+      value: 2.243
       objectReference: {fileID: 0}
     - target: {fileID: 7784753762549582527, guid: 2c7cda89d5af8fd48a48b6e50f1aa54e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5588,8 +5588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 708, y: 384.86615}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 723.406, y: 384.86615}
+  m_SizeDelta: {x: 1.092, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375154838
 MonoBehaviour:
@@ -6029,11 +6029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4134946344727269534, guid: 2bc9f9de2be13724aba4d52b7d1993e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.974
+      value: -1.240029
       objectReference: {fileID: 0}
     - target: {fileID: 4134946344727269534, guid: 2bc9f9de2be13724aba4d52b7d1993e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.243
+      value: -4.01
       objectReference: {fileID: 0}
     - target: {fileID: 4134946344727269534, guid: 2bc9f9de2be13724aba4d52b7d1993e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6568,25 +6568,25 @@ MonoBehaviour:
     count: 2
   - name: Blue fragile package
     prefab: {fileID: 7746202346799084911, guid: f0cbd53f2659f4c4f842cf5c0a6e6216, type: 3}
-    count: 4
+    count: 2
   - name: Brown fragile package
     prefab: {fileID: 870543087364799295, guid: 55d22f8bb6cc96448903bff988826aec, type: 3}
     count: 2
   - name: Orange fragile package
     prefab: {fileID: 4941404184623874006, guid: 40864f4edab02b6458f37d503f7f5230, type: 3}
-    count: 3
+    count: 1
   - name: Brown White package
     prefab: {fileID: 3006799042590863700, guid: 876abaa7c7e804b4e97d20263fc7c93f, type: 3}
-    count: 2
+    count: 4
   - name: Blue White package
     prefab: {fileID: 5447465375831965651, guid: d9cf641796542304b996deb2fb08f02f, type: 3}
     count: 2
   - name: Orange White package
     prefab: {fileID: 8307888381426875638, guid: 82c20f6a817626e4197d82b4fbe212a2, type: 3}
-    count: 2
+    count: 4
   initialSpawnRate: 4.5
   currentSpawnRate: 0
-  difficulty: 0.01
+  difficulty: 0.027
   gamePlay: 1
   endGamePanel: {fileID: 2030204392}
   scoreManager: {fileID: 556872327}

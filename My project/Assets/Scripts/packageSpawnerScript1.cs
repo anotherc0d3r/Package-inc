@@ -161,7 +161,7 @@ public class packageSpawnerScript1 : MonoBehaviour
            Debug.Log("Game over");
        }
    */
-
+/*
     void GameOver()
     {
         endGamePanel.SetActive(true);
@@ -216,6 +216,74 @@ public class packageSpawnerScript1 : MonoBehaviour
         {
             Debug.Log("ScoreManager not assigned");
         }
+}
+
+*/
+
+void GameOver()
+{
+    endGamePanel.SetActive(true);
+    Time.timeScale = 0;
+
+    scoreManager.SubmitScore(levelName);
+
+    int finalScore = scoreManager.GetScore();
+    finalScoreText.text = "" + finalScore;
+
+    audioManager.instance.PlaySFX(audioManager.instance.levelCompleteSFX);
+
+    if (spawnScript != null)
+        spawnScript.resetSpawnRate();
+
+    // Unlock next level only if required score met
+    int requiredScore = PlayerPrefs.GetInt(levelName + "_RequiredScore", 0);
+
+    // --- SAFE version of currentLevel detection ---
+    int currentLevel = 1; // default fallback if anything fails
+    if (!string.IsNullOrEmpty(levelName))
+    {
+        string[] parts = levelName.Split(' ');
+        if (parts.Length > 1 && int.TryParse(parts[1], out int parsedLevel))
+        {
+            currentLevel = parsedLevel;
+        }
+    }
+    int nextLevel = currentLevel + 1;
+    // ----------------------------------------------
+
+    if (finalScore >= requiredScore)
+    {
+        if (nextLevel <= SceneManager.sceneCountInBuildSettings)
+        {
+            levelComplete(nextLevel);  // Updates Unlockedlevel
+            Debug.Log("Unlocked Level " + nextLevel);
+        }
+        else
+        {
+            Debug.Log("All levels complete! No next level to unlock.");
+        }
+    }
+    else
+    {
+        Debug.Log("Score not high enough to unlock next level!");
+    }
+
+    // Update the end-game menu
+    endGameMenu menu = endGamePanel.GetComponent<endGameMenu>();
+    if (menu != null)
+    {
+        menu.SetFinalScore(finalScore);
+    }
+
+    // Submit score to highscore table
+    if (scoreManager != null)
+    {
+        scoreManager.SubmitScore(levelName);
+    }
+    else
+    {
+        Debug.Log("ScoreManager not assigned");
+    }
 }
 
     public void resetSpawnRate()
