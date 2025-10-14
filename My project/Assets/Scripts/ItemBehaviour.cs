@@ -34,10 +34,10 @@ public class ItemBehaviour : MonoBehaviour
                 audioManager.instance.PlaySFX(audioManager.instance.PackageOpened);
                 spriteRenderer.sprite = newSprite;
             }
-            else
+        /*    else
             {
                 spriteRenderer.sprite = originalSprite;
-            }
+            }*/
         }
     }
     void Update()
