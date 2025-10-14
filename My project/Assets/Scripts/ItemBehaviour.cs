@@ -26,16 +26,18 @@ public class ItemBehaviour : MonoBehaviour
 
     void OnMouseDown()
     {
-        
-      //  spriteRenderer.sprite = newSprite;
-        if (spriteRenderer.sprite == originalSprite)
+        if (newSprite != null)
         {
-            audioManager.instance.PlaySFX(audioManager.instance.PackageOpened);
-            spriteRenderer.sprite = newSprite;
-        }
-        else
-        {
-            spriteRenderer.sprite = originalSprite;
+            //  spriteRenderer.sprite = newSprite;
+            if (spriteRenderer.sprite == originalSprite)
+            {
+                audioManager.instance.PlaySFX(audioManager.instance.PackageOpened);
+                spriteRenderer.sprite = newSprite;
+            }
+            else
+            {
+                spriteRenderer.sprite = originalSprite;
+            }
         }
     }
     void Update()
